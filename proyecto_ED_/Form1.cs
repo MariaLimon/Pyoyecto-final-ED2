@@ -165,7 +165,7 @@ namespace proyecto_ED_
 		listaEnlazadaSimple lista1;
 		private void buttonMostrarListas_Click(object sender, EventArgs e)
 		{
-			
+
 			OcultarSubmenu();
 			abrilFormulario(new FormMostrar(3));
 			
