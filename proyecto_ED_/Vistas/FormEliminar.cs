@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_ED_.EstructurasDeDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace proyecto_ED_
 	public partial class FormEliminar : Form
 	{
 		private int origen;
+
+		listaEnlazadaSimple lista;
 		public FormEliminar(int origen)
 		{
 			InitializeComponent();
@@ -37,7 +40,12 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-
+				lista = new listaEnlazadaSimple();
+				lista.EliminarDelFrente();
+				if (lista.EliminarDelFrente() != null)
+					MessageBox.Show("se elimino el primer elemnto de la lista");
+				else
+					MessageBox.Show("No se elimino");
 			}
 			else
 			{

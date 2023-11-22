@@ -43,34 +43,38 @@
 			panelGuardarColas.Controls.Add(buttonEliminarFinal);
 			panelGuardarColas.Controls.Add(buttonEliminarFrente);
 			panelGuardarColas.Dock = DockStyle.Bottom;
-			panelGuardarColas.Location = new Point(0, 306);
+			panelGuardarColas.Location = new Point(0, 408);
+			panelGuardarColas.Margin = new Padding(3, 4, 3, 4);
 			panelGuardarColas.Name = "panelGuardarColas";
-			panelGuardarColas.Size = new Size(668, 216);
+			panelGuardarColas.Size = new Size(763, 288);
 			panelGuardarColas.TabIndex = 14;
 			// 
 			// buttonEliminarMedio
 			// 
-			buttonEliminarMedio.Location = new Point(299, 97);
+			buttonEliminarMedio.Location = new Point(311, 129);
+			buttonEliminarMedio.Margin = new Padding(3, 4, 3, 4);
 			buttonEliminarMedio.Name = "buttonEliminarMedio";
-			buttonEliminarMedio.Size = new Size(120, 25);
+			buttonEliminarMedio.Size = new Size(168, 33);
 			buttonEliminarMedio.TabIndex = 2;
 			buttonEliminarMedio.Text = "Eliminar del medio";
 			buttonEliminarMedio.UseVisualStyleBackColor = true;
 			// 
 			// buttonEliminarFinal
 			// 
-			buttonEliminarFinal.Location = new Point(480, 97);
+			buttonEliminarFinal.Location = new Point(544, 129);
+			buttonEliminarFinal.Margin = new Padding(3, 4, 3, 4);
 			buttonEliminarFinal.Name = "buttonEliminarFinal";
-			buttonEliminarFinal.Size = new Size(120, 25);
+			buttonEliminarFinal.Size = new Size(142, 33);
 			buttonEliminarFinal.TabIndex = 1;
 			buttonEliminarFinal.Text = "Eliminar del final";
 			buttonEliminarFinal.UseVisualStyleBackColor = true;
 			// 
 			// buttonEliminarFrente
 			// 
-			buttonEliminarFrente.Location = new Point(109, 97);
+			buttonEliminarFrente.Location = new Point(102, 129);
+			buttonEliminarFrente.Margin = new Padding(3, 4, 3, 4);
 			buttonEliminarFrente.Name = "buttonEliminarFrente";
-			buttonEliminarFrente.Size = new Size(120, 25);
+			buttonEliminarFrente.Size = new Size(160, 33);
 			buttonEliminarFrente.TabIndex = 0;
 			buttonEliminarFrente.Text = "Eliminar del frente";
 			buttonEliminarFrente.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
 			buttonCerarForm.FlatStyle = FlatStyle.Flat;
 			buttonCerarForm.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			buttonCerarForm.ForeColor = SystemColors.ButtonFace;
-			buttonCerarForm.Location = new Point(601, 12);
+			buttonCerarForm.Location = new Point(687, 16);
+			buttonCerarForm.Margin = new Padding(3, 4, 3, 4);
 			buttonCerarForm.Name = "buttonCerarForm";
-			buttonCerarForm.Size = new Size(55, 25);
+			buttonCerarForm.Size = new Size(63, 33);
 			buttonCerarForm.TabIndex = 15;
 			buttonCerarForm.Text = "x";
 			buttonCerarForm.UseVisualStyleBackColor = false;
@@ -94,12 +99,13 @@
 			// 
 			// FormEliminar
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.Black;
-			ClientSize = new Size(668, 522);
+			ClientSize = new Size(763, 696);
 			Controls.Add(buttonCerarForm);
 			Controls.Add(panelGuardarColas);
+			Margin = new Padding(3, 4, 3, 4);
 			Name = "FormEliminar";
 			Text = "FormEliminar";
 			panelGuardarColas.ResumeLayout(false);

@@ -29,11 +29,13 @@
 		private void InitializeComponent()
 		{
 			panelContenedor = new Panel();
+			textBoxNombrePelicula = new TextBox();
+			labelNombre = new Label();
 			buttonCerarForm = new Button();
 			panelGuardarColas = new Panel();
+			buttonBuscar = new Button();
 			panelMostrar = new Panel();
 			panel1 = new Panel();
-			buttonBuscar = new Button();
 			panelContenedor.SuspendLayout();
 			panelGuardarColas.SuspendLayout();
 			SuspendLayout();
@@ -41,6 +43,8 @@
 			// panelContenedor
 			// 
 			panelContenedor.BackColor = Color.Black;
+			panelContenedor.Controls.Add(textBoxNombrePelicula);
+			panelContenedor.Controls.Add(labelNombre);
 			panelContenedor.Controls.Add(buttonCerarForm);
 			panelContenedor.Controls.Add(panelGuardarColas);
 			panelContenedor.Controls.Add(panelMostrar);
@@ -50,6 +54,27 @@
 			panelContenedor.Name = "panelContenedor";
 			panelContenedor.Size = new Size(668, 522);
 			panelContenedor.TabIndex = 3;
+			// 
+			// textBoxNombrePelicula
+			// 
+			textBoxNombrePelicula.BackColor = Color.FromArgb(135, 20, 31);
+			textBoxNombrePelicula.BorderStyle = BorderStyle.None;
+			textBoxNombrePelicula.ForeColor = Color.White;
+			textBoxNombrePelicula.Location = new Point(309, 101);
+			textBoxNombrePelicula.Name = "textBoxNombrePelicula";
+			textBoxNombrePelicula.Size = new Size(100, 16);
+			textBoxNombrePelicula.TabIndex = 17;
+			// 
+			// labelNombre
+			// 
+			labelNombre.AutoSize = true;
+			labelNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			labelNombre.ForeColor = SystemColors.ButtonFace;
+			labelNombre.Location = new Point(234, 102);
+			labelNombre.Name = "labelNombre";
+			labelNombre.Size = new Size(60, 17);
+			labelNombre.TabIndex = 16;
+			labelNombre.Text = "Nombre:";
 			// 
 			// buttonCerarForm
 			// 
@@ -78,6 +103,16 @@
 			panelGuardarColas.Size = new Size(668, 216);
 			panelGuardarColas.TabIndex = 14;
 			// 
+			// buttonBuscar
+			// 
+			buttonBuscar.Location = new Point(278, 105);
+			buttonBuscar.Name = "buttonBuscar";
+			buttonBuscar.Size = new Size(120, 25);
+			buttonBuscar.TabIndex = 16;
+			buttonBuscar.Text = "Buscar";
+			buttonBuscar.UseVisualStyleBackColor = true;
+			buttonBuscar.Click += buttonBuscar_Click;
+			// 
 			// panelMostrar
 			// 
 			panelMostrar.Location = new Point(1, 2);
@@ -92,16 +127,6 @@
 			panel1.Size = new Size(0, 0);
 			panel1.TabIndex = 2;
 			// 
-			// buttonBuscar
-			// 
-			buttonBuscar.Location = new Point(266, 45);
-			buttonBuscar.Name = "buttonBuscar";
-			buttonBuscar.Size = new Size(120, 25);
-			buttonBuscar.TabIndex = 16;
-			buttonBuscar.Text = "Buscar";
-			buttonBuscar.UseVisualStyleBackColor = true;
-			buttonBuscar.Click += buttonBuscar_Click;
-			// 
 			// FormBuscar
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -111,6 +136,7 @@
 			Name = "FormBuscar";
 			Text = "FormBuscar";
 			panelContenedor.ResumeLayout(false);
+			panelContenedor.PerformLayout();
 			panelGuardarColas.ResumeLayout(false);
 			ResumeLayout(false);
 		}
@@ -123,5 +149,7 @@
 		private Panel panelMostrar;
 		private Panel panel1;
 		private Button buttonBuscar;
+		private Label labelNombre;
+		public TextBox textBoxNombrePelicula;
 	}
 }

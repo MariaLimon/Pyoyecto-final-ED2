@@ -243,9 +243,6 @@
 		private Label labelNombre;
 		private Label labelGenero;
 		private Label labelDuracion;
-		private TextBox textBoxDuracionPelicula;
-		private TextBox textBoxGeneroPelicula;
-		private TextBox textBoxNombrePelicula;
 		private Label label1;
 		private Button buttonCerarForm;
 		private Panel panelGuardarColas;
@@ -253,7 +250,10 @@
 		private Button buttonGuardarFinalColas;
 		private Button buttonGuardarFrente;
 		private Label labelAño;
-		private TextBox textBoxAño;
 		private TextBox textBoxResultadoGuardar;
+		public TextBox textBoxDuracionPelicula;
+		public TextBox textBoxGeneroPelicula;
+		public TextBox textBoxNombrePelicula;
+		public TextBox textBoxAño;
 	}
 }

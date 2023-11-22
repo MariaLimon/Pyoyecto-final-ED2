@@ -1,4 +1,5 @@
 ﻿using proyecto_ED_.EstructurasDeDatos;
+using proyecto_ED_.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,17 @@ using System.Windows.Forms;
 
 namespace proyecto_ED_
 {
-	public partial class FormRegistrar : Form
+    public partial class FormRegistrar : Form
 	{
 		private int origen;
-		
+
+		listaEnlazadaSimple lista;
 
 		public FormRegistrar(int origen)
 		{
 			InitializeComponent();
 			this.origen = origen;
 		}
-
 		//para solo aceptar numeros en la duracion de la pelicula
 		private void textBoxDuracionPelicula_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -33,20 +34,32 @@ namespace proyecto_ED_
 			}
 		}
 
+		//cerrar fromulario
 		private void buttonCerarForm_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 
-		Peliculas[,] matrizPeliculas = new Peliculas[4, 10];
-		public listaEnlazadaSimple listaPeliculas = new listaEnlazadaSimple();
 
+		//funcionalidad de los botones
 		private void buttonGuardarFrente_Click(object sender, EventArgs e)
 		{
+			/*
 			string nombre = textBoxNombrePelicula.Text;
 			string genero = textBoxGeneroPelicula.Text;
 			string duracion = textBoxDuracionPelicula.Text;
 			string year = textBoxAño.Text;
+
+			Peliculas peliculaAgergada = new Peliculas(nombre,genero,duracion,year);
+			*/
+			//peliculaAgergada.Nombre = textBoxNombrePelicula;
+
+			Peliculas peliculaAgregada = new Peliculas(textBoxNombrePelicula.Text, textBoxGeneroPelicula.Text,textBoxDuracionPelicula.Text,textBoxAño.Text);
+
+			peliculaAgregada.Nombre = textBoxNombrePelicula.Text;
+			peliculaAgregada.Genero = textBoxGeneroPelicula.Text;
+			peliculaAgregada.Duracion = textBoxDuracionPelicula.Text;
+			peliculaAgregada.Year = textBoxAño.Text;
 			if (origen == 1)
 			{
 				//colas
@@ -54,25 +67,23 @@ namespace proyecto_ED_
 			else if (origen == 2)
 			{
 				//matriz
-				matrizPeliculas[0, 0] = new Peliculas(nombre, genero, duracion, year);
-				MessageBox.Show(matrizPeliculas[0, 0].Nombre);
+				
 			}
 			else if (origen == 3)
 			{
 				//listas
-				int longitudVieja = listaPeliculas.Longitud();
-				listaPeliculas.InsertarFrenteLista(nombre, genero, duracion, year);
-
-				//saber si se guardo en la lista
-				if (listaPeliculas.ListaVacia != null || listaPeliculas.Longitud() > longitudVieja)
-					textBoxResultadoGuardar.Text = "Se guardo en la lista";
-				else
-					textBoxResultadoGuardar.Text = "No se guardo";
+				lista = new listaEnlazadaSimple();
+				//lista.InsertarFrenteLista(peliculaAgergada);
+				lista.InsertarFrenteLista(peliculaAgregada);
+				MessageBox.Show("la pelicula fue agregada en la lista");
+				
 			}
 			else
 			{
 				//pilas
 			}
+
+
 		}
 
 		private void buttonGuardarMedio_Click(object sender, EventArgs e)
@@ -92,13 +103,7 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-				int longitudVieja = listaPeliculas.Longitud();
-				listaPeliculas.InsertarMedioLista(nombre, genero, duracion, year);
-
-				if (listaPeliculas.ListaVacia != null || listaPeliculas.Longitud() > longitudVieja)
-					textBoxResultadoGuardar.Text = "Se guardo en la lista";
-				else
-					textBoxResultadoGuardar.Text = "No se guardo";
+				
 			}
 			else
 			{

@@ -13,6 +13,7 @@ namespace proyecto_ED_
 {
 	public partial class Form1 : Form
 	{
+		
 		public Form1()
 		{
 			InitializeComponent();
@@ -158,12 +159,16 @@ namespace proyecto_ED_
 		private void buttonEditarListas_Click(object sender, EventArgs e)
 		{
 			OcultarSubmenu();
+			
 		}
-
+		
+		listaEnlazadaSimple lista1;
 		private void buttonMostrarListas_Click(object sender, EventArgs e)
 		{
+			
 			OcultarSubmenu();
 			abrilFormulario(new FormMostrar(3));
+			
 
 		}
 

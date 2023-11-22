@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_ED_.EstructurasDeDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,11 +20,14 @@ namespace proyecto_ED_
 			this.origen = origen;
 		}
 
+		//cerrar formulario
 		private void buttonCerarForm_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 
+
+		//funcionalidad botones
 		private void buttonBuscar_Click(object sender, EventArgs e)
 		{
 			if (origen == 1)
@@ -44,5 +48,7 @@ namespace proyecto_ED_
 				//pilas
 			}
 		}
+
+
 	}
 }
