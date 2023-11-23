@@ -34,6 +34,8 @@ namespace proyecto_ED_
 			}
 		}
 
+		
+
 		//cerrar fromulario
 		private void buttonCerarForm_Click(object sender, EventArgs e)
 		{
@@ -44,22 +46,26 @@ namespace proyecto_ED_
 		//funcionalidad de los botones
 		private void buttonGuardarFrente_Click(object sender, EventArgs e)
 		{
-			/*
+
 			string nombre = textBoxNombrePelicula.Text;
 			string genero = textBoxGeneroPelicula.Text;
 			string duracion = textBoxDuracionPelicula.Text;
 			string year = textBoxAño.Text;
 
-			Peliculas peliculaAgergada = new Peliculas(nombre,genero,duracion,year);
-			*/
+			//Peliculas peliculaAgergada = new Peliculas(nombre, genero, duracion, year);
+
 			//peliculaAgergada.Nombre = textBoxNombrePelicula;
 
-			Peliculas peliculaAgregada = new Peliculas(textBoxNombrePelicula.Text, textBoxGeneroPelicula.Text,textBoxDuracionPelicula.Text,textBoxAño.Text);
-
-			peliculaAgregada.Nombre = textBoxNombrePelicula.Text;
-			peliculaAgregada.Genero = textBoxGeneroPelicula.Text;
-			peliculaAgregada.Duracion = textBoxDuracionPelicula.Text;
-			peliculaAgregada.Year = textBoxAño.Text;
+			//Peliculas peliculaAgregada = new Peliculas(textBoxNombrePelicula.Text, textBoxGeneroPelicula.Text,textBoxDuracionPelicula.Text,textBoxAño.Text);
+			Peliculas peliculaAgregada = new Peliculas()
+			{
+				Nombre = nombre,
+				Genero = genero,
+				Duracion = duracion,
+				Year = year
+			};
+		
+		
 			if (origen == 1)
 			{
 				//colas
@@ -75,8 +81,9 @@ namespace proyecto_ED_
 				lista = new listaEnlazadaSimple();
 				//lista.InsertarFrenteLista(peliculaAgergada);
 				lista.InsertarFrenteLista(peliculaAgregada);
-				MessageBox.Show("la pelicula fue agregada en la lista");
-				
+				FormMostrar mostrar = new FormMostrar(peliculaAgregada);
+				mostrar.ShowDialog();
+
 			}
 			else
 			{

@@ -121,7 +121,7 @@ namespace proyecto_ED_
 		}
 
 		private void buttonMostrarMatrices_Click(object sender, EventArgs e)
-		{
+		{ 
 			abrilFormulario(new FormMostrar(2));
 			OcultarSubmenu();
 		}
@@ -133,7 +133,7 @@ namespace proyecto_ED_
 
 		private void buttonBuscarMatrices_Click(object sender, EventArgs e)
 		{
-			abrilFormulario(new FormMostrar(2));
+			//abrilFormulario();
 			OcultarSubmenu();
 		}
 		#endregion
@@ -162,7 +162,6 @@ namespace proyecto_ED_
 			
 		}
 		
-		listaEnlazadaSimple lista1;
 		private void buttonMostrarListas_Click(object sender, EventArgs e)
 		{
 

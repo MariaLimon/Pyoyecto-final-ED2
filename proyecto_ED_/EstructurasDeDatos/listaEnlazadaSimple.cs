@@ -155,12 +155,16 @@ namespace proyecto_ED_.EstructurasDeDatos
             if (ListaVacia())
             {
                 primero = ultimo = new Nodo(nuevaPeli);
-            }
-            else
+				MessageBox.Show("La pelicula fue agregada en la lista");
+
+			}
+			else
             {
                 primero = new Nodo(nuevaPeli,primero);
-            }
-        }
+				MessageBox.Show("La pelicula fue agregada en la lista");
+
+			}
+		}
         //insertar en el medio de la lista
         public void InsertarMedioLista(Peliculas nuevaPeli)
         {

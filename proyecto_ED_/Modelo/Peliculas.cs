@@ -13,6 +13,7 @@ namespace proyecto_ED_.Modelo
         public string Duracion { get; set; }
         public string Year { get; set; }
 
+        /*
         public Peliculas(string nombre, string genero, string duracion, string year)
         {
             Nombre = nombre;
@@ -20,5 +21,6 @@ namespace proyecto_ED_.Modelo
             Duracion = duracion;
             Year = year;
         }
+        */
     }
 }
