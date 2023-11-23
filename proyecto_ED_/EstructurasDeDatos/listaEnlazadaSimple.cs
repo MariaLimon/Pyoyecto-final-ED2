@@ -74,7 +74,7 @@ namespace proyecto_ED_.EstructurasDeDatos
                 Nodo actual = primero;
                 while (actual != null)
                 {
-                    MessageBox.Show($"{actual.getDatos()}->");
+                    MessageBox.Show("actual.getDatos()");
                     actual = actual.getSiguiente();
                 }
                 MessageBox.Show("->null");//enviar a un mendajebox
@@ -144,10 +144,11 @@ namespace proyecto_ED_.EstructurasDeDatos
                 }
                 if (centinela == -1)
                 {
-                    Console.WriteLine("el elemento NO encuentra en la lista");
+                    Console.WriteLine("el elemento NO se encuentra en la lista");
                 }
             }
         }
+
         //insertar un numero al frente de la lista
         public void InsertarFrenteLista(Peliculas nuevaPeli)
         {

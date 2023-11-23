@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace proyecto_ED_.Modelo
 {
     public class Peliculas
-    {
+    { 
+        public int id { get; set; }
         public string Nombre { get; set; }
         public string Genero { get; set; }
         public string Duracion { get; set; }

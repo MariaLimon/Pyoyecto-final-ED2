@@ -24,6 +24,23 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
+			if (origen == 1)
+			{
+				//colas
+			}
+			else if (origen == 2)
+			{
+				//matriz
+			}
+			else if (origen == 3)
+			{
+				//listas
+
+			}
+			else
+			{
+				//pilas
+			}
 		}
 
 		private void buttonCerarForm_Click(object sender, EventArgs e)
@@ -36,6 +53,7 @@ namespace proyecto_ED_
 			int fila = dataGridView1.Rows.Add();
 			if (peliculaRecibida.Nombre != null)
 			{
+				dataGridView1.Rows[fila].Cells["Cid"].Value = peliculaRecibida.id;
 				dataGridView1.Rows[fila].Cells["Cnombre"].Value = peliculaRecibida.Nombre;
 				dataGridView1.Rows[fila].Cells["Cgenero"].Value = peliculaRecibida.Genero;
 				dataGridView1.Rows[fila].Cells["Cduracion"].Value = peliculaRecibida.Duracion;
@@ -43,6 +61,7 @@ namespace proyecto_ED_
 			}
 			else
 			{
+				buttonMostrar.Enabled = false;
 				textBoxMensajeMostrar.Text = "no hay datos para agregar";
 			}
 

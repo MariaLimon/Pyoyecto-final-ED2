@@ -17,6 +17,7 @@ namespace proyecto_ED_
 		private int origen;
 
 		listaEnlazadaSimple lista;
+		Matriz matrizPelicula;
 
 		public FormRegistrar(int origen)
 		{
@@ -42,11 +43,12 @@ namespace proyecto_ED_
 			this.Close();
 		}
 
-
+		int contadorGuardarFrente = 0;
 		//funcionalidad de los botones
 		private void buttonGuardarFrente_Click(object sender, EventArgs e)
-		{
-
+		{ 
+			contadorGuardarFrente++;
+			
 			string nombre = textBoxNombrePelicula.Text;
 			string genero = textBoxGeneroPelicula.Text;
 			string duracion = textBoxDuracionPelicula.Text;
@@ -65,7 +67,6 @@ namespace proyecto_ED_
 				Year = year
 			};
 		
-		
 			if (origen == 1)
 			{
 				//colas
@@ -73,13 +74,13 @@ namespace proyecto_ED_
 			else if (origen == 2)
 			{
 				//matriz
-				
+				matrizPelicula = new Matriz();
 			}
 			else if (origen == 3)
 			{
 				//listas
 				lista = new listaEnlazadaSimple();
-				//lista.InsertarFrenteLista(peliculaAgergada);
+				peliculaAgregada.id = contadorGuardarFrente;
 				lista.InsertarFrenteLista(peliculaAgregada);
 				FormMostrar mostrar = new FormMostrar(peliculaAgregada);
 				mostrar.ShowDialog();

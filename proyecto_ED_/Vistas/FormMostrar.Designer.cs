@@ -30,16 +30,17 @@
 		{
 			panelContenedor = new Panel();
 			dataGridView1 = new DataGridView();
+			Cid = new DataGridViewTextBoxColumn();
 			Cnombre = new DataGridViewTextBoxColumn();
 			Cgenero = new DataGridViewTextBoxColumn();
 			Cduracion = new DataGridViewTextBoxColumn();
 			Cyear = new DataGridViewTextBoxColumn();
 			buttonCerarForm = new Button();
 			panelGuardarColas = new Panel();
+			textBoxMensajeMostrar = new TextBox();
 			buttonMostrar = new Button();
 			panelMostrar = new Panel();
 			panel1 = new Panel();
-			textBoxMensajeMostrar = new TextBox();
 			panelContenedor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			panelGuardarColas.SuspendLayout();
@@ -61,15 +62,24 @@
 			// 
 			// dataGridView1
 			// 
+			dataGridView1.BackgroundColor = Color.Black;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cnombre, Cgenero, Cduracion, Cyear });
-			dataGridView1.Location = new Point(33, 86);
+			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
+			dataGridView1.GridColor = Color.Black;
+			dataGridView1.Location = new Point(59, 60);
 			dataGridView1.Margin = new Padding(3, 2, 3, 2);
 			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(588, 179);
+			dataGridView1.Size = new Size(553, 221);
 			dataGridView1.TabIndex = 16;
+			// 
+			// Cid
+			// 
+			Cid.HeaderText = "Id";
+			Cid.Name = "Cid";
+			Cid.ReadOnly = true;
 			// 
 			// Cnombre
 			// 
@@ -123,6 +133,17 @@
 			panelGuardarColas.Size = new Size(668, 216);
 			panelGuardarColas.TabIndex = 14;
 			// 
+			// textBoxMensajeMostrar
+			// 
+			textBoxMensajeMostrar.BackColor = Color.FromArgb(135, 20, 31);
+			textBoxMensajeMostrar.BorderStyle = BorderStyle.None;
+			textBoxMensajeMostrar.ForeColor = Color.White;
+			textBoxMensajeMostrar.Location = new Point(245, 15);
+			textBoxMensajeMostrar.Name = "textBoxMensajeMostrar";
+			textBoxMensajeMostrar.ReadOnly = true;
+			textBoxMensajeMostrar.Size = new Size(165, 16);
+			textBoxMensajeMostrar.TabIndex = 10;
+			// 
 			// buttonMostrar
 			// 
 			buttonMostrar.Location = new Point(287, 74);
@@ -148,16 +169,6 @@
 			panel1.Size = new Size(0, 0);
 			panel1.TabIndex = 2;
 			// 
-			// textBoxMensajeMostrar
-			// 
-			textBoxMensajeMostrar.BackColor = Color.FromArgb(135, 20, 31);
-			textBoxMensajeMostrar.BorderStyle = BorderStyle.None;
-			textBoxMensajeMostrar.ForeColor = Color.White;
-			textBoxMensajeMostrar.Location = new Point(245, 15);
-			textBoxMensajeMostrar.Name = "textBoxMensajeMostrar";
-			textBoxMensajeMostrar.Size = new Size(165, 16);
-			textBoxMensajeMostrar.TabIndex = 10;
-			// 
 			// FormMostrar
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -182,10 +193,11 @@
 		private Button buttonCerarForm;
 		private DataGridView dataGridView1;
 		private Button buttonMostrar;
+		public TextBox textBoxMensajeMostrar;
+		private DataGridViewTextBoxColumn Cid;
 		private DataGridViewTextBoxColumn Cnombre;
 		private DataGridViewTextBoxColumn Cgenero;
 		private DataGridViewTextBoxColumn Cduracion;
 		private DataGridViewTextBoxColumn Cyear;
-		public TextBox textBoxMensajeMostrar;
 	}
 }

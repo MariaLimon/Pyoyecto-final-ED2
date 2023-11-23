@@ -8,80 +8,64 @@ using proyecto_ED_.Modelo;
 
 namespace proyecto_ED_.EstructurasDeDatos
 {
-    public class Matriz
-    {
-		//private Peliculas[] matrizPeliculas;
+	public class Matriz
+	{
+		int indice = 5;
+		public bool MatrizLlena(Peliculas[] matrizPeliculas)
+		{ 
+			
+			if (matrizPeliculas[5] == null)
+				return false;
+			
+			return true;
+		}
 
-		//public Matriz(int filas)
-  //      {
-  //          matrizPeliculas = new Peliculas[filas];
-  //      }
+		public bool MatrizVacia(Peliculas[] matrizPeliculas)
+		{
+			if (matrizPeliculas[0] != null)
+				return false;
 
-		//public bool MatrizLlena()
-		//{
-		//	if (matrizPeliculas[matrizPeliculas.Length] != null)
-		//		return true;
+			return true;
+		}
 
-		//	return false;
-		//}
+		
 
-		//public bool MatrizVacia()
-		//{
-		//	if (matrizPeliculas[0] != null)
-		//		return false;
+		public void OrdenarDecendente()
+		{
 
-		//	return true;
-		//}
+		}
+
+		public void OrdenarAscendente()
+		{
+
+		}
 
 
-		//public void OrdenarDecendente()
-		//{
+		public void BuscarPorId(int id, Peliculas[] matrizPeliculas)
+		{
+			int objetivo = id;
+			bool encontrado = false;
 
-		//}
+			for (int i = 0; i < indice; i++)
+			{
+				if (matrizPeliculas[i].id == objetivo)
+				{
+					MessageBox.Show($"El {objetivo} está en la posición [{i}] de la matriz");
+					encontrado = true;
+					break;
+				}
 
-		//public void OrdenarAscendente()
-		//{
+				if (encontrado)
+				{
+					break;
+				}
+			}
 
-		//}
-
-  //      public void AgregarPeliculaFrente(int fila, Peliculas pelicula)
-  //      {
-  //          if (fila < matrizPeliculas.GetLength(0))
-  //          {
-  //              matrizPeliculas[fila] = pelicula;
-  //          }
-  //          else
-  //          {
-  //              // Manejar el caso cuando la posición está fuera de los límites de la matriz
-  //          }
-  //      }
-
-		//public void BuscarPorNombre(string nombre)
-		//{
-		//	string objetivo = nombre;
-		//	int filas = matrizPeliculas.GetLength(0);
-		//	bool encontrado = false;
-
-		//	for (int i = 0; i < filas; i++)
-		//	{	
-		//		if (matrizPeliculas[i].Nombre == objetivo)
-		//		{
-		//			Console.WriteLine($"El {objetivo} está en la posición [{i}] de la matriz");	
-		//			encontrado = true;
-		//			break;
-		//		}
-				
-		//		if (encontrado)
-		//		{
-		//			break;
-		//		}
-		//	}
-
-		//	if (!encontrado)
-		//	{
-		//		Console.WriteLine($"El {objetivo} no está en la matriz");
-		//	}
-		//}
+			if (!encontrado)
+			{
+				MessageBox.Show($"El {objetivo} no está en la matriz");
+			}
+		}
 
 	}
 }
