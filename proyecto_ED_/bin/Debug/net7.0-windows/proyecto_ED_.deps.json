@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "proyecto_ED_/1.0.0": {
+        "runtime": {
+          "proyecto_ED_.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "proyecto_ED_/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -11,7 +11,18 @@ namespace proyecto_ED_.EstructurasDeDatos
 {
     public class listaEnlazadaSimple
     {
-        Nodo primero;
+        private static listaEnlazadaSimple instancia;
+
+		public static listaEnlazadaSimple ObtenerInstancia()
+		{
+			if (instancia == null)
+			{
+				instancia = new listaEnlazadaSimple();
+			}
+			return instancia;
+		}
+
+		Nodo primero;
         Nodo ultimo;
 
         //lista vacia
@@ -33,37 +44,44 @@ namespace proyecto_ED_.EstructurasDeDatos
              */
         }
 
-        public int Longitud()
-        {
-            int contador = 0;
-            if (ListaVacia())
-            {
-                return contador;
-            }
-            else
-            {
-                //saber que es el primer valor y el ultimo
-                Nodo actual = primero;
-                if (actual.getSiguiente == null)
-                {
-                    return ++contador;
-                    //o (contador+1)
-                }
-                else
-                {
+		public int Longitud()
+		{
+			int contador = 0;
+			if (ListaVacia())
+			{
+				return contador;
+			}
+			else
+			{
+				Nodo actual = primero;
+				if (actual.getSiguiente() == null)
+				{
+					return ++contador;
+				}
+				else
+				{
+					while (actual.getSiguiente() != null)
+					{
+						contador++;
+						actual = actual.getSiguiente();
+					}
+					return contador + 1;
+				}
+			}
+		}
 
-                    while (actual.getSiguiente != null)
-                    {
-                        contador++;
-                        actual = actual.getSiguiente();
 
-                    }
-                    return contador + 1;
-                }
-            }
-        }
+		public IEnumerable<Peliculas> ObtenerPeliculas()
+		{
+			Nodo actual = primero;
+			while (actual != null)
+			{
+				yield return actual.getDatos();
+				actual = actual.getSiguiente();
+			}
+		}
 
-        public void ImprimirLista()
+		public void ImprimirLista()
         {
             if (ListaVacia())
             {
@@ -74,7 +92,8 @@ namespace proyecto_ED_.EstructurasDeDatos
                 Nodo actual = primero;
                 while (actual != null)
                 {
-                    MessageBox.Show("actual.getDatos()");
+                    MessageBox.Show($"{actual.getDatos()}");
+                    
                     actual = actual.getSiguiente();
                 }
                 MessageBox.Show("->null");//enviar a un mendajebox
@@ -188,32 +207,34 @@ namespace proyecto_ED_.EstructurasDeDatos
                 }
                 anterior = actual;
                 Nodo nuevo = new Nodo(nuevaPeli, actual.getSiguiente());
-
+                MessageBox.Show("la pelicula se agrego a la lista");
                 anterior.setSiguiente(nuevo);
             }
         }
 
 
-        public Peliculas EliminarDelFrente()
-        {
-            if (ListaVacia())
-            {
-                Peliculas eliminarElemento = primero.getDatos(); // recupera los datos
+		public Peliculas EliminarDelFrente()
+		{
+			if (ListaVacia())
+			{
+				return null;
+			}
 
-                // restablece las referencias primerNodo y ultimoNodo
-                if (primero == ultimo)
-                    primero = ultimo = null;
-                else
-                {
-                    primero = primero.getSiguiente();
-                }
+			Peliculas eliminarElemento = primero.getDatos(); // recupera los datos
 
-                return eliminarElemento; // devuelve los datos eliminados
-            }
+			// restablece las referencias primero y ultimo si solo hay un elemento en la lista
+			if (primero == ultimo)
+			{
+				primero = ultimo = null;
+			}
+			else
+			{
+				primero = primero.getSiguiente();
+			}
 
-            return null; // Return null or handle differently if the list is empty
-        }
+			return eliminarElemento; // devuelve los datos eliminados
+		}
 
-    }
+	}
 
 }

@@ -37,13 +37,10 @@
 			Cyear = new DataGridViewTextBoxColumn();
 			buttonCerarForm = new Button();
 			panelGuardarColas = new Panel();
-			textBoxMensajeMostrar = new TextBox();
-			buttonMostrar = new Button();
 			panelMostrar = new Panel();
 			panel1 = new Panel();
 			panelContenedor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-			panelGuardarColas.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panelContenedor
@@ -125,35 +122,11 @@
 			// panelGuardarColas
 			// 
 			panelGuardarColas.BackColor = Color.FromArgb(135, 20, 31);
-			panelGuardarColas.Controls.Add(textBoxMensajeMostrar);
-			panelGuardarColas.Controls.Add(buttonMostrar);
 			panelGuardarColas.Dock = DockStyle.Bottom;
 			panelGuardarColas.Location = new Point(0, 306);
 			panelGuardarColas.Name = "panelGuardarColas";
 			panelGuardarColas.Size = new Size(668, 216);
 			panelGuardarColas.TabIndex = 14;
-			// 
-			// textBoxMensajeMostrar
-			// 
-			textBoxMensajeMostrar.BackColor = Color.FromArgb(135, 20, 31);
-			textBoxMensajeMostrar.BorderStyle = BorderStyle.None;
-			textBoxMensajeMostrar.ForeColor = Color.White;
-			textBoxMensajeMostrar.Location = new Point(245, 15);
-			textBoxMensajeMostrar.Name = "textBoxMensajeMostrar";
-			textBoxMensajeMostrar.ReadOnly = true;
-			textBoxMensajeMostrar.Size = new Size(165, 16);
-			textBoxMensajeMostrar.TabIndex = 10;
-			// 
-			// buttonMostrar
-			// 
-			buttonMostrar.Location = new Point(287, 74);
-			buttonMostrar.Margin = new Padding(3, 2, 3, 2);
-			buttonMostrar.Name = "buttonMostrar";
-			buttonMostrar.Size = new Size(82, 22);
-			buttonMostrar.TabIndex = 0;
-			buttonMostrar.Text = "Refrescar";
-			buttonMostrar.UseVisualStyleBackColor = true;
-			buttonMostrar.Click += buttonMostrar_Click;
 			// 
 			// panelMostrar
 			// 
@@ -179,8 +152,6 @@
 			Text = "FormMostrar";
 			panelContenedor.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-			panelGuardarColas.ResumeLayout(false);
-			panelGuardarColas.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -192,8 +163,6 @@
 		private Panel panelGuardarColas;
 		private Button buttonCerarForm;
 		private DataGridView dataGridView1;
-		private Button buttonMostrar;
-		public TextBox textBoxMensajeMostrar;
 		private DataGridViewTextBoxColumn Cid;
 		private DataGridViewTextBoxColumn Cnombre;
 		private DataGridViewTextBoxColumn Cgenero;

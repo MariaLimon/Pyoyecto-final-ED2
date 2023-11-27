@@ -1,10 +1,12 @@
 ﻿using proyecto_ED_.EstructurasDeDatos;
 using proyecto_ED_.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +18,6 @@ namespace proyecto_ED_
 	{
 		private int origen;
 
-		listaEnlazadaSimple lista;
 		Matriz matrizPelicula;
 
 		public FormRegistrar(int origen)
@@ -44,29 +45,29 @@ namespace proyecto_ED_
 		}
 
 		int contadorGuardarFrente = 0;
+		public Peliculas[] peliculas;
+
 		//funcionalidad de los botones
 		private void buttonGuardarFrente_Click(object sender, EventArgs e)
-		{ 
+		{
 			contadorGuardarFrente++;
+			listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 			
-			string nombre = textBoxNombrePelicula.Text;
-			string genero = textBoxGeneroPelicula.Text;
-			string duracion = textBoxDuracionPelicula.Text;
-			string year = textBoxAño.Text;
-
-			//Peliculas peliculaAgergada = new Peliculas(nombre, genero, duracion, year);
-
-			//peliculaAgergada.Nombre = textBoxNombrePelicula;
-
-			//Peliculas peliculaAgregada = new Peliculas(textBoxNombrePelicula.Text, textBoxGeneroPelicula.Text,textBoxDuracionPelicula.Text,textBoxAño.Text);
-			Peliculas peliculaAgregada = new Peliculas()
+			Peliculas pelicula = new Peliculas();
 			{
-				Nombre = nombre,
-				Genero = genero,
-				Duracion = duracion,
-				Year = year
+				pelicula.Nombre = textBoxNombrePelicula.Text;
+				pelicula.Genero = textBoxGeneroPelicula.Text;
+				pelicula.Duracion = textBoxDuracionPelicula.Text;
+				pelicula.Year = textBoxAño.Text;
 			};
-		
+			
+			
+			Peliculas[] peliculaAgregada = new Peliculas[10];
+			{
+				peliculaAgregada[contadorGuardarFrente] = pelicula ;
+			}
+
+
 			if (origen == 1)
 			{
 				//colas
@@ -79,11 +80,10 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-				lista = new listaEnlazadaSimple();
-				peliculaAgregada.id = contadorGuardarFrente;
-				lista.InsertarFrenteLista(peliculaAgregada);
-				FormMostrar mostrar = new FormMostrar(peliculaAgregada);
-				mostrar.ShowDialog();
+				
+				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
+				lista.InsertarFrenteLista(pelicula);
+				
 
 			}
 			else
@@ -96,10 +96,22 @@ namespace proyecto_ED_
 
 		private void buttonGuardarMedio_Click(object sender, EventArgs e)
 		{
-			string nombre = textBoxNombrePelicula.Text;
-			string genero = textBoxGeneroPelicula.Text;
-			string duracion = textBoxDuracionPelicula.Text;
-			string year = textBoxAño.Text;
+
+			listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+
+			Peliculas pelicula = new Peliculas();
+			{
+				pelicula.Nombre = textBoxNombrePelicula.Text;
+				pelicula.Genero = textBoxGeneroPelicula.Text;
+				pelicula.Duracion = textBoxDuracionPelicula.Text;
+				pelicula.Year = textBoxAño.Text;
+			};
+
+			Peliculas[] peliculaAgregada = new Peliculas[10];
+			{
+				peliculaAgregada[contadorGuardarFrente] = pelicula;
+			}
+
 			if (origen == 1)
 			{
 				//colas
@@ -111,7 +123,8 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-				
+				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
+				lista.InsertarMedioLista(pelicula);
 			}
 			else
 			{

@@ -40,12 +40,19 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-				lista = new listaEnlazadaSimple();
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 				lista.EliminarDelFrente();
-				if (lista.EliminarDelFrente() != null)
-					MessageBox.Show("se elimino el primer elemnto de la lista");
-				else
-					MessageBox.Show("No se elimino");
+				var peliculas = lista.ObtenerPeliculas();
+				foreach (var pelicula in peliculas)
+				{
+					int fila = dataGridView1.Rows.Add();
+					dataGridView1.Rows[fila].Cells["Cid"].Value = pelicula.id;
+					dataGridView1.Rows[fila].Cells["Cnombre"].Value = pelicula.Nombre;
+					dataGridView1.Rows[fila].Cells["Cgenero"].Value = pelicula.Genero;
+					dataGridView1.Rows[fila].Cells["Cduracion"].Value = pelicula.Duracion;
+					dataGridView1.Rows[fila].Cells["Cyear"].Value = pelicula.Year;
+				}
+				
 			}
 			else
 			{

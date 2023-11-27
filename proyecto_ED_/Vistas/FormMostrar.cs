@@ -6,17 +6,20 @@ namespace proyecto_ED_
 {
 	public partial class FormMostrar : Form
 	{
-		Peliculas peliculaRecibida = new Peliculas();
-		public FormMostrar(Peliculas peliculaMostrar)
+		Peliculas[] peliculaRecibida = new Peliculas[10];
+		listaEnlazadaSimple listaAgrgada = listaEnlazadaSimple.ObtenerInstancia();
+		public FormMostrar(Peliculas[] peliculaMostrar = null)
 		{
 			InitializeComponent();
 			peliculaRecibida = peliculaMostrar;
-			/*
-			peliculaRecibida.Nombre = peliculaMostrar.Nombre;
-			peliculaRecibida.Genero = peliculaMostrar.Genero;
-			peliculaRecibida.Duracion = peliculaMostrar.Duracion;
-			peliculaRecibida.Year = peliculaMostrar.Year;}
-			*/
+
+
+		}
+
+		public FormMostrar(listaEnlazadaSimple listam)
+		{
+			InitializeComponent();
+			listam = listaEnlazadaSimple.ObtenerInstancia();
 		}
 
 		private int origen;
@@ -35,7 +38,17 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+				var peliculas = lista.ObtenerPeliculas();
+				foreach (var pelicula in peliculas)
+				{
+					int fila = dataGridView1.Rows.Add();
+					dataGridView1.Rows[fila].Cells["Cid"].Value = pelicula.id;
+					dataGridView1.Rows[fila].Cells["Cnombre"].Value = pelicula.Nombre;
+					dataGridView1.Rows[fila].Cells["Cgenero"].Value = pelicula.Genero;
+					dataGridView1.Rows[fila].Cells["Cduracion"].Value = pelicula.Duracion;
+					dataGridView1.Rows[fila].Cells["Cyear"].Value = pelicula.Year;
+				}
 			}
 			else
 			{
@@ -48,26 +61,6 @@ namespace proyecto_ED_
 			this.Close();
 		}
 
-		private void buttonMostrar_Click(object sender, EventArgs e)
-		{
-			int fila = dataGridView1.Rows.Add();
-			if (peliculaRecibida.Nombre != null)
-			{
-				dataGridView1.Rows[fila].Cells["Cid"].Value = peliculaRecibida.id;
-				dataGridView1.Rows[fila].Cells["Cnombre"].Value = peliculaRecibida.Nombre;
-				dataGridView1.Rows[fila].Cells["Cgenero"].Value = peliculaRecibida.Genero;
-				dataGridView1.Rows[fila].Cells["Cduracion"].Value = peliculaRecibida.Duracion;
-				dataGridView1.Rows[fila].Cells["Cyear"].Value = peliculaRecibida.Year;
-			}
-			else
-			{
-				buttonMostrar.Enabled = false;
-				textBoxMensajeMostrar.Text = "no hay datos para agregar";
-			}
-
-
-		}
-
-
+		
 	}
 }

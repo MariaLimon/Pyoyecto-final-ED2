@@ -81,7 +81,7 @@ namespace proyecto_ED_
 
 		private void buttonMostarColas_Click(object sender, EventArgs e)
 		{
-			abrilFormulario(new FormMostrar(1));
+			//abrilFormulario(new FormMostrar(1));
 			OcultarSubmenu();
 		}
 
@@ -122,7 +122,7 @@ namespace proyecto_ED_
 
 		private void buttonMostrarMatrices_Click(object sender, EventArgs e)
 		{ 
-			abrilFormulario(new FormMostrar(2));
+			//abrilFormulario(new FormMostrar(2));
 			OcultarSubmenu();
 		}
 
@@ -208,7 +208,7 @@ namespace proyecto_ED_
 
 		private void buttonMostrarPilas_Click(object sender, EventArgs e)
 		{
-			abrilFormulario(new FormMostrar(4));
+			//abrilFormulario(new FormMostrar(4));
 			OcultarSubmenu();
 		}
 
