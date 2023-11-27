@@ -10,62 +10,121 @@ namespace proyecto_ED_.EstructurasDeDatos
 {
 	public class Matriz
 	{
-		int indice = 5;
+        private static Matriz instancia;
+
+        public static Matriz ObtenerInstancia()
+        {
+            if (instancia == null)
+            {
+                instancia = new Matriz();
+            }
+            return instancia;
+        }
+
 		public bool MatrizLlena(Peliculas[] matrizPeliculas)
 		{ 
 			
-			if (matrizPeliculas[5] == null)
+			if (matrizPeliculas[matrizPeliculas.Length-1] == null)
 				return false;
 			
 			return true;
 		}
 
-		public bool MatrizVacia(Peliculas[] matrizPeliculas)
+		public void AgregarPc(Peliculas[] matrizPeliculas)
 		{
-			if (matrizPeliculas[0] != null)
-				return false;
-
-			return true;
-		}
-
-		
-
-		public void OrdenarDecendente()
-		{
-
-		}
-
-		public void OrdenarAscendente()
-		{
-
-		}
-
-
-		public void BuscarPorId(int id, Peliculas[] matrizPeliculas)
-		{
-			int objetivo = id;
-			bool encontrado = false;
-
-			for (int i = 0; i < indice; i++)
+			int contador = 0;
+			if (MatrizLlena(matrizPeliculas))
 			{
-				if (matrizPeliculas[i].id == objetivo)
-				{
-					MessageBox.Show($"El {objetivo} está en la posición [{i}] de la matriz");
-					encontrado = true;
-					break;
-				}
+				MessageBox.Show("Array lleno joven");
 
-				if (encontrado)
+			}
+			else
+			{
+
+				//matrizPeliculas[contador] = compu;
+				contador++;
+				MessageBox.Show("Se guardaron los datos exitosamente");
+
+			}
+
+		}
+            public bool MatrizVacia(Peliculas[] matrizPeliculas)
+			{
+				if (matrizPeliculas[0] != null)
+					return false;
+
+				return true;
+			}
+
+
+
+		public void OrdenarDecendente(Peliculas[] matrizPeliculas)
+		{
+
+			// Implementación de la ordenación descendente usando el método de burbuja
+			int n = matrizPeliculas.Length;
+
+			for (int i = 0; i < n - 1; i++)
+			{
+				for (int j = 0; j < n - 1 - i; j++)
 				{
+					// Comparar los años de las películas y swap si es necesario
+					if (matrizPeliculas[j].Year < matrizPeliculas[j + 1].Year)
+					{
+						Peliculas temp = matrizPeliculas[j];
+						matrizPeliculas[j] = matrizPeliculas[j + 1];
+						matrizPeliculas[j + 1] = temp;
+					}
+				}
+			}
+		}
+		public void OrdenarAscendente(Peliculas[] matrizPeliculas)
+		{
+			// Implementación de la ordenación descendente usando el método de burbuja
+			int n = matrizPeliculas.Length;
+
+			for (int i = 0; i < n - 1; i++)
+			{
+				for (int j = 0; j < n - 1 - i; j++)
+				{
+					// Comparar los años de las películas y swap si es necesario
+					if (matrizPeliculas[j].Year > matrizPeliculas[j + 1].Year)
+					{
+						Peliculas temp = matrizPeliculas[j];
+						matrizPeliculas[j] = matrizPeliculas[j + 1];
+						matrizPeliculas[j + 1] = temp;
+					}
+				}
+			}
+		}
+
+
+		public void BuscarPorNombre(string nombre ,Peliculas[] matrizPeliculas)
+		{
+            int n = matrizPeliculas.Length;
+            string nombreObjetivo = nombre;
+			int centinela = -1;
+			int posicion = 0;
+
+			for (int i = 0; i < n; i++)
+			{
+				if (matrizPeliculas[i].Nombre == nombreObjetivo)
+				{
+					posicion = i + 1;
 					break;
 				}
 			}
 
-			if (!encontrado)
+			if (centinela != -1)
 			{
-				MessageBox.Show($"El {objetivo} no está en la matriz");
-			}
+                MessageBox.Show($"El {nombreObjetivo} está en la posición [{posicion}] de la matriz");
+            }
+			else
+			{
+                MessageBox.Show($"El {nombreObjetivo} no está en la matriz");
+            }
 		}
+
 
 	}
 }
