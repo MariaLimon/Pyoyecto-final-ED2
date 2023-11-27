@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace proyecto_ED_
 {
-    public partial class FormRegistrar : Form
+	public partial class FormRegistrar : Form
 	{
 		private int origen;
 
@@ -36,7 +36,7 @@ namespace proyecto_ED_
 			}
 		}
 
-		
+
 
 		//cerrar fromulario
 		private void buttonCerarForm_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace proyecto_ED_
 		{
 			contadorGuardarFrente++;
 			listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
-			
+
 			Peliculas pelicula = new Peliculas();
 			{
 				pelicula.Nombre = textBoxNombrePelicula.Text;
@@ -60,11 +60,11 @@ namespace proyecto_ED_
 				pelicula.Duracion = textBoxDuracionPelicula.Text;
 				pelicula.Year = textBoxAño.Text;
 			};
-			
-			
+
+
 			Peliculas[] peliculaAgregada = new Peliculas[10];
 			{
-				peliculaAgregada[contadorGuardarFrente] = pelicula ;
+				peliculaAgregada[contadorGuardarFrente] = pelicula;
 			}
 
 
@@ -80,10 +80,10 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
-				
+
 				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
 				lista.InsertarFrenteLista(pelicula);
-				
+
 
 			}
 			else
@@ -132,6 +132,41 @@ namespace proyecto_ED_
 			}
 		}
 
+		private void buttonGuardarFinalColas_Click(object sender, EventArgs e)
+		{
+			listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 
+			Peliculas pelicula = new Peliculas();
+			{
+				pelicula.Nombre = textBoxNombrePelicula.Text;
+				pelicula.Genero = textBoxGeneroPelicula.Text;
+				pelicula.Duracion = textBoxDuracionPelicula.Text;
+				pelicula.Year = textBoxAño.Text;
+			};
+
+			Peliculas[] peliculaAgregada = new Peliculas[10];
+			{
+				peliculaAgregada[contadorGuardarFrente] = pelicula;
+			}
+
+			if (origen == 1)
+			{
+				//colas
+			}
+			else if (origen == 2)
+			{
+				//matriz
+			}
+			else if (origen == 3)
+			{
+				//listas
+				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
+				lista.InsertarFinalLista(pelicula);
+			}
+			else
+			{
+				//pilas
+			}
+		}
 	}
 }

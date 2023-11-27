@@ -212,7 +212,20 @@ namespace proyecto_ED_.EstructurasDeDatos
             }
         }
 
+		public void InsertarFinalLista(Peliculas nuevaPeli)
+		{
+			if (ListaVacia())
+			{
+				primero = ultimo = new Nodo(nuevaPeli);
+				MessageBox.Show("Pelicula agregada con existo");
 
+			}
+			else
+			{
+				ultimo = ultimo.Siguiente = new Nodo(nuevaPeli);
+				MessageBox.Show("Pelicula agregada con existo");
+			}
+		}
 		public Peliculas EliminarDelFrente()
 		{
 			if (ListaVacia())
