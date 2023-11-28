@@ -41,6 +41,8 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+				lista.BuscarElemento(textBoxNombrePelicula.Text);
 
 			}
 			else

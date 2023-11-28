@@ -1,4 +1,5 @@
 ﻿using proyecto_ED_.EstructurasDeDatos;
+using proyecto_ED_.Vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -158,8 +159,8 @@ namespace proyecto_ED_
 
 		private void buttonEditarListas_Click(object sender, EventArgs e)
 		{
-			OcultarSubmenu();
-			
+			abrilFormulario(new FormEditar(3));
+			OcultarSubmenu();	
 		}
 		
 		private void buttonMostrarListas_Click(object sender, EventArgs e)

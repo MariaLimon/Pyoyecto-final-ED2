@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			panelContenedor = new Panel();
+			dataGridView1 = new DataGridView();
 			textBoxNombrePelicula = new TextBox();
 			labelNombre = new Label();
 			buttonCerarForm = new Button();
@@ -36,13 +37,20 @@
 			buttonBuscar = new Button();
 			panelMostrar = new Panel();
 			panel1 = new Panel();
+			Cid = new DataGridViewTextBoxColumn();
+			Cnombre = new DataGridViewTextBoxColumn();
+			Cgenero = new DataGridViewTextBoxColumn();
+			Cduracion = new DataGridViewTextBoxColumn();
+			Cyear = new DataGridViewTextBoxColumn();
 			panelContenedor.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			panelGuardarColas.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panelContenedor
 			// 
 			panelContenedor.BackColor = Color.Black;
+			panelContenedor.Controls.Add(dataGridView1);
 			panelContenedor.Controls.Add(textBoxNombrePelicula);
 			panelContenedor.Controls.Add(labelNombre);
 			panelContenedor.Controls.Add(buttonCerarForm);
@@ -54,6 +62,21 @@
 			panelContenedor.Name = "panelContenedor";
 			panelContenedor.Size = new Size(668, 522);
 			panelContenedor.TabIndex = 3;
+			// 
+			// dataGridView1
+			// 
+			dataGridView1.BackgroundColor = Color.Black;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
+			dataGridView1.GridColor = Color.Black;
+			dataGridView1.Location = new Point(21, 139);
+			dataGridView1.Margin = new Padding(3, 2, 3, 2);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridView1.RowTemplate.Height = 29;
+			dataGridView1.Size = new Size(635, 150);
+			dataGridView1.TabIndex = 18;
 			// 
 			// textBoxNombrePelicula
 			// 
@@ -127,6 +150,47 @@
 			panel1.Size = new Size(0, 0);
 			panel1.TabIndex = 2;
 			// 
+			// Cid
+			// 
+			Cid.HeaderText = "Id";
+			Cid.MaxInputLength = 3276;
+			Cid.MinimumWidth = 6;
+			Cid.Name = "Cid";
+			Cid.ReadOnly = true;
+			Cid.Width = 60;
+			// 
+			// Cnombre
+			// 
+			Cnombre.HeaderText = "Nombre";
+			Cnombre.MinimumWidth = 6;
+			Cnombre.Name = "Cnombre";
+			Cnombre.ReadOnly = true;
+			Cnombre.Width = 125;
+			// 
+			// Cgenero
+			// 
+			Cgenero.HeaderText = "Genero";
+			Cgenero.MinimumWidth = 6;
+			Cgenero.Name = "Cgenero";
+			Cgenero.ReadOnly = true;
+			Cgenero.Width = 125;
+			// 
+			// Cduracion
+			// 
+			Cduracion.HeaderText = "Duración";
+			Cduracion.MinimumWidth = 6;
+			Cduracion.Name = "Cduracion";
+			Cduracion.ReadOnly = true;
+			Cduracion.Width = 125;
+			// 
+			// Cyear
+			// 
+			Cyear.HeaderText = "Año de lanzamiento";
+			Cyear.MinimumWidth = 6;
+			Cyear.Name = "Cyear";
+			Cyear.ReadOnly = true;
+			Cyear.Width = 125;
+			// 
 			// FormBuscar
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -137,6 +201,7 @@
 			Text = "FormBuscar";
 			panelContenedor.ResumeLayout(false);
 			panelContenedor.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			panelGuardarColas.ResumeLayout(false);
 			ResumeLayout(false);
 		}
@@ -151,5 +216,11 @@
 		private Button buttonBuscar;
 		private Label labelNombre;
 		public TextBox textBoxNombrePelicula;
+		private DataGridView dataGridView1;
+		private DataGridViewTextBoxColumn Cid;
+		private DataGridViewTextBoxColumn Cnombre;
+		private DataGridViewTextBoxColumn Cgenero;
+		private DataGridViewTextBoxColumn Cduracion;
+		private DataGridViewTextBoxColumn Cyear;
 	}
 }
