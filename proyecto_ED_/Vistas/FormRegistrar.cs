@@ -58,8 +58,8 @@ namespace proyecto_ED_
 				pelicula.Nombre = textBoxNombrePelicula.Text;
 				pelicula.Genero = textBoxGeneroPelicula.Text;
 				pelicula.Duracion = textBoxDuracionPelicula.Text;
-                pelicula.Year = Convert.ToInt16(textBoxAño.Text);
-            };
+				pelicula.Year = Convert.ToInt16(textBoxAño.Text);
+			};
 
 
 			Peliculas[] peliculaAgregada = new Peliculas[10];
@@ -104,8 +104,8 @@ namespace proyecto_ED_
 				pelicula.Nombre = textBoxNombrePelicula.Text;
 				pelicula.Genero = textBoxGeneroPelicula.Text;
 				pelicula.Duracion = textBoxDuracionPelicula.Text;
-                pelicula.Year = Convert.ToInt16(textBoxAño.Text);
-            };
+				pelicula.Year = Convert.ToInt16(textBoxAño.Text);
+			};
 
 			Peliculas[] peliculaAgregada = new Peliculas[10];
 			{
@@ -141,8 +141,8 @@ namespace proyecto_ED_
 				pelicula.Nombre = textBoxNombrePelicula.Text;
 				pelicula.Genero = textBoxGeneroPelicula.Text;
 				pelicula.Duracion = textBoxDuracionPelicula.Text;
-                pelicula.Year = Convert.ToInt16(textBoxAño.Text);
-            };
+				pelicula.Year = Convert.ToInt16(textBoxAño.Text);
+			};
 
 			Peliculas[] peliculaAgregada = new Peliculas[10];
 			{
@@ -168,5 +168,7 @@ namespace proyecto_ED_
 				//pilas
 			}
 		}
+
+
 	}
 }

@@ -51,9 +51,9 @@
 			labelNombre.AutoSize = true;
 			labelNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
 			labelNombre.ForeColor = SystemColors.ButtonFace;
-			labelNombre.Location = new Point(96, 95);
+			labelNombre.Location = new Point(84, 71);
 			labelNombre.Name = "labelNombre";
-			labelNombre.Size = new Size(77, 23);
+			labelNombre.Size = new Size(60, 17);
 			labelNombre.TabIndex = 0;
 			labelNombre.Text = "Nombre:";
 			// 
@@ -62,9 +62,9 @@
 			labelGenero.AutoSize = true;
 			labelGenero.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			labelGenero.ForeColor = SystemColors.ButtonFace;
-			labelGenero.Location = new Point(96, 153);
+			labelGenero.Location = new Point(84, 115);
 			labelGenero.Name = "labelGenero";
-			labelGenero.Size = new Size(70, 23);
+			labelGenero.Size = new Size(57, 19);
 			labelGenero.TabIndex = 1;
 			labelGenero.Text = "Genero;";
 			// 
@@ -73,9 +73,9 @@
 			labelDuracion.AutoSize = true;
 			labelDuracion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			labelDuracion.ForeColor = SystemColors.ButtonFace;
-			labelDuracion.Location = new Point(96, 204);
+			labelDuracion.Location = new Point(84, 153);
 			labelDuracion.Name = "labelDuracion";
-			labelDuracion.Size = new Size(83, 23);
+			labelDuracion.Size = new Size(67, 19);
 			labelDuracion.TabIndex = 2;
 			labelDuracion.Text = "Duración:";
 			// 
@@ -84,11 +84,10 @@
 			textBoxDuracionPelicula.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxDuracionPelicula.BorderStyle = BorderStyle.None;
 			textBoxDuracionPelicula.ForeColor = Color.White;
-			textBoxDuracionPelicula.Location = new Point(182, 207);
-			textBoxDuracionPelicula.Margin = new Padding(3, 4, 3, 4);
+			textBoxDuracionPelicula.Location = new Point(159, 155);
 			textBoxDuracionPelicula.MaxLength = 3;
 			textBoxDuracionPelicula.Name = "textBoxDuracionPelicula";
-			textBoxDuracionPelicula.Size = new Size(114, 20);
+			textBoxDuracionPelicula.Size = new Size(100, 16);
 			textBoxDuracionPelicula.TabIndex = 7;
 			textBoxDuracionPelicula.KeyPress += textBoxDuracionPelicula_KeyPress;
 			// 
@@ -97,10 +96,9 @@
 			textBoxGeneroPelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxGeneroPelicula.BorderStyle = BorderStyle.None;
 			textBoxGeneroPelicula.ForeColor = Color.White;
-			textBoxGeneroPelicula.Location = new Point(168, 152);
-			textBoxGeneroPelicula.Margin = new Padding(3, 4, 3, 4);
+			textBoxGeneroPelicula.Location = new Point(147, 114);
 			textBoxGeneroPelicula.Name = "textBoxGeneroPelicula";
-			textBoxGeneroPelicula.Size = new Size(114, 20);
+			textBoxGeneroPelicula.Size = new Size(100, 16);
 			textBoxGeneroPelicula.TabIndex = 8;
 			// 
 			// textBoxNombrePelicula
@@ -108,19 +106,18 @@
 			textBoxNombrePelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxNombrePelicula.BorderStyle = BorderStyle.None;
 			textBoxNombrePelicula.ForeColor = Color.White;
-			textBoxNombrePelicula.Location = new Point(182, 93);
-			textBoxNombrePelicula.Margin = new Padding(3, 4, 3, 4);
+			textBoxNombrePelicula.Location = new Point(159, 70);
 			textBoxNombrePelicula.Name = "textBoxNombrePelicula";
-			textBoxNombrePelicula.Size = new Size(114, 20);
+			textBoxNombrePelicula.Size = new Size(100, 16);
 			textBoxNombrePelicula.TabIndex = 9;
 			// 
 			// label1
 			// 
 			label1.AutoSize = true;
 			label1.ForeColor = SystemColors.ButtonFace;
-			label1.Location = new Point(303, 207);
+			label1.Location = new Point(265, 155);
 			label1.Name = "label1";
-			label1.Size = new Size(62, 20);
+			label1.Size = new Size(51, 15);
 			label1.TabIndex = 10;
 			label1.Text = "minutos";
 			// 
@@ -133,10 +130,9 @@
 			buttonCerarForm.FlatStyle = FlatStyle.Flat;
 			buttonCerarForm.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			buttonCerarForm.ForeColor = SystemColors.ButtonFace;
-			buttonCerarForm.Location = new Point(687, 16);
-			buttonCerarForm.Margin = new Padding(3, 4, 3, 4);
+			buttonCerarForm.Location = new Point(601, 12);
 			buttonCerarForm.Name = "buttonCerarForm";
-			buttonCerarForm.Size = new Size(63, 33);
+			buttonCerarForm.Size = new Size(55, 25);
 			buttonCerarForm.TabIndex = 12;
 			buttonCerarForm.Text = "x";
 			buttonCerarForm.UseVisualStyleBackColor = false;
@@ -150,10 +146,9 @@
 			panelGuardarColas.Controls.Add(buttonGuardarFinalColas);
 			panelGuardarColas.Controls.Add(buttonGuardarFrente);
 			panelGuardarColas.Dock = DockStyle.Bottom;
-			panelGuardarColas.Location = new Point(0, 408);
-			panelGuardarColas.Margin = new Padding(3, 4, 3, 4);
+			panelGuardarColas.Location = new Point(0, 306);
 			panelGuardarColas.Name = "panelGuardarColas";
-			panelGuardarColas.Size = new Size(763, 288);
+			panelGuardarColas.Size = new Size(668, 216);
 			panelGuardarColas.TabIndex = 13;
 			// 
 			// textBoxResultadoGuardar
@@ -161,19 +156,17 @@
 			textBoxResultadoGuardar.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxResultadoGuardar.BorderStyle = BorderStyle.None;
 			textBoxResultadoGuardar.ForeColor = Color.White;
-			textBoxResultadoGuardar.Location = new Point(329, 17);
-			textBoxResultadoGuardar.Margin = new Padding(3, 4, 3, 4);
+			textBoxResultadoGuardar.Location = new Point(288, 13);
 			textBoxResultadoGuardar.Name = "textBoxResultadoGuardar";
 			textBoxResultadoGuardar.ReadOnly = true;
-			textBoxResultadoGuardar.Size = new Size(163, 20);
+			textBoxResultadoGuardar.Size = new Size(143, 16);
 			textBoxResultadoGuardar.TabIndex = 16;
 			// 
 			// buttonGuardarMedio
 			// 
-			buttonGuardarMedio.Location = new Point(342, 129);
-			buttonGuardarMedio.Margin = new Padding(3, 4, 3, 4);
+			buttonGuardarMedio.Location = new Point(299, 97);
 			buttonGuardarMedio.Name = "buttonGuardarMedio";
-			buttonGuardarMedio.Size = new Size(137, 33);
+			buttonGuardarMedio.Size = new Size(120, 25);
 			buttonGuardarMedio.TabIndex = 2;
 			buttonGuardarMedio.Text = "Guardar al medio";
 			buttonGuardarMedio.UseVisualStyleBackColor = true;
@@ -181,10 +174,9 @@
 			// 
 			// buttonGuardarFinalColas
 			// 
-			buttonGuardarFinalColas.Location = new Point(549, 129);
-			buttonGuardarFinalColas.Margin = new Padding(3, 4, 3, 4);
+			buttonGuardarFinalColas.Location = new Point(480, 97);
 			buttonGuardarFinalColas.Name = "buttonGuardarFinalColas";
-			buttonGuardarFinalColas.Size = new Size(137, 33);
+			buttonGuardarFinalColas.Size = new Size(120, 25);
 			buttonGuardarFinalColas.TabIndex = 1;
 			buttonGuardarFinalColas.Text = "Guardar al final";
 			buttonGuardarFinalColas.UseVisualStyleBackColor = true;
@@ -192,10 +184,9 @@
 			// 
 			// buttonGuardarFrente
 			// 
-			buttonGuardarFrente.Location = new Point(125, 129);
-			buttonGuardarFrente.Margin = new Padding(3, 4, 3, 4);
+			buttonGuardarFrente.Location = new Point(109, 97);
 			buttonGuardarFrente.Name = "buttonGuardarFrente";
-			buttonGuardarFrente.Size = new Size(137, 33);
+			buttonGuardarFrente.Size = new Size(120, 25);
 			buttonGuardarFrente.TabIndex = 0;
 			buttonGuardarFrente.Text = "Guardar al frente";
 			buttonGuardarFrente.UseVisualStyleBackColor = true;
@@ -206,9 +197,9 @@
 			labelAño.AutoSize = true;
 			labelAño.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			labelAño.ForeColor = SystemColors.ButtonFace;
-			labelAño.Location = new Point(96, 269);
+			labelAño.Location = new Point(84, 202);
 			labelAño.Name = "labelAño";
-			labelAño.Size = new Size(168, 23);
+			labelAño.Size = new Size(134, 19);
 			labelAño.TabIndex = 14;
 			labelAño.Text = "Año de lanzamiento:";
 			// 
@@ -217,19 +208,18 @@
 			textBoxAño.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxAño.BorderStyle = BorderStyle.None;
 			textBoxAño.ForeColor = Color.White;
-			textBoxAño.Location = new Point(256, 273);
-			textBoxAño.Margin = new Padding(3, 4, 3, 4);
+			textBoxAño.Location = new Point(224, 205);
 			textBoxAño.MaxLength = 4;
 			textBoxAño.Name = "textBoxAño";
-			textBoxAño.Size = new Size(114, 20);
+			textBoxAño.Size = new Size(100, 16);
 			textBoxAño.TabIndex = 15;
 			// 
 			// FormRegistrar
 			// 
-			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.Black;
-			ClientSize = new Size(763, 696);
+			ClientSize = new Size(668, 522);
 			Controls.Add(textBoxAño);
 			Controls.Add(labelAño);
 			Controls.Add(panelGuardarColas);
@@ -241,7 +231,6 @@
 			Controls.Add(labelDuracion);
 			Controls.Add(labelGenero);
 			Controls.Add(labelNombre);
-			Margin = new Padding(3, 4, 3, 4);
 			Name = "FormRegistrar";
 			Text = "Registrar pelicula";
 			panelGuardarColas.ResumeLayout(false);

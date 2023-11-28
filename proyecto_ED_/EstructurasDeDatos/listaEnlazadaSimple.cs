@@ -103,13 +103,13 @@ namespace proyecto_ED_.EstructurasDeDatos
 
 
         //buscar un elemento especifico en la lista
-        public void BuscarElemento(Peliculas elementoBuscado)
+        public void BuscarElemento(string elementoBuscado)
         {
             int centinela = -1;
             //Nodo elemento = elementoBuscado;
             if (ListaVacia())
             {
-                Console.WriteLine("La lista esta vacia");
+                MessageBox.Show("La lista esta vacia");
             }
             else
             {
@@ -117,10 +117,10 @@ namespace proyecto_ED_.EstructurasDeDatos
                 Nodo actual = primero;
                 while (actual != null)
                 {
-                    if (actual.getDatos() == elementoBuscado)
+                    if (actual.getDatos().Nombre == elementoBuscado)
                     {
                         centinela = 1;
-                        Console.WriteLine("el elemento se encuentra en la lista");
+						MessageBox.Show("el elemento se encuentra en la lista");
                         break;
                     }
                     else
@@ -130,12 +130,45 @@ namespace proyecto_ED_.EstructurasDeDatos
                 }
                 if (centinela == -1)
                 {
-                    Console.WriteLine("el elemento NO encuentra en la lista");
+					    MessageBox.Show("el elemento NO encuentra en la lista");
                 }
             }
         }
-        //mostrar la posicion de un elemento
-        public void PosicionElemento(Peliculas elementoBuscado)
+
+		//buscar y mostrar su informacion para ser editada
+		public Peliculas BuscarElementoEditar(string elementoBuscado)
+        { 
+			//Nodo elemento = elementoBuscado;
+			if (ListaVacia())
+			{
+				MessageBox.Show("La lista esta vacia");
+                return null;
+			}
+			else
+			{
+				//Console.WriteLine("dame el numero que buscas");
+				Nodo actual = primero;
+				while (actual != null)
+				{
+					if (actual.getDatos().Nombre == elementoBuscado)
+					{
+						MessageBox.Show("el elemento se encuentra en la lista");
+                        return actual.getDatos();
+					}
+					else
+					{
+						actual = actual.getSiguiente();
+					}
+				}
+				
+					MessageBox.Show("el elemento NO encuentra en la lista");
+                    return null;
+				
+			}
+		}
+
+		//mostrar la posicion de un elemento
+		public void PosicionElemento(Peliculas elementoBuscado)
         {
             //Nodo elemento = elementoBuscado;
             if (ListaVacia())
@@ -247,6 +280,8 @@ namespace proyecto_ED_.EstructurasDeDatos
 
 			return eliminarElemento; // devuelve los datos eliminados
 		}
+
+        
 
 	}
 
