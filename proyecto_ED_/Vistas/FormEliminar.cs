@@ -20,6 +20,30 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
+			if (origen == 1)
+			{
+				//colas
+			}
+			else if (origen == 2)
+			{
+				//matriz
+			}
+			else if (origen == 3)
+			{
+				//listas
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+				lista.ImprimirLista(dataGridView1);
+			}
+			else if (origen == 4)
+			{
+				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.ImprimirDatos(dataGridView1);
+			}
+			else
+			{
+				MessageBox.Show("Ocurrio un error al abrir el formulario D:");
+			}
 		}
 
 		private void buttonCerarForm_Click(object sender, EventArgs e)
@@ -40,23 +64,87 @@ namespace proyecto_ED_
 			else if (origen == 3)
 			{
 				//listas
+
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+
 				lista.EliminarDelFrente();
-				var peliculas = lista.ObtenerPeliculas();
-				foreach (var pelicula in peliculas)
-				{
-					int fila = dataGridView1.Rows.Add();
-					dataGridView1.Rows[fila].Cells["Cid"].Value = pelicula.id;
-					dataGridView1.Rows[fila].Cells["Cnombre"].Value = pelicula.Nombre;
-					dataGridView1.Rows[fila].Cells["Cgenero"].Value = pelicula.Genero;
-					dataGridView1.Rows[fila].Cells["Cduracion"].Value = pelicula.Duracion;
-					dataGridView1.Rows[fila].Cells["Cyear"].Value = pelicula.Year;
-				}
+				lista.ImprimirLista(dataGridView1);
+			}
+			else if(origen == 4)
+			{
+				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.EliminarFrentePila();
+				dataGridView1.Rows.Clear();
+				pila.ImprimirDatos(dataGridView1);
+			}
+			else
+			{
+				MessageBox.Show("Ocurrio un error al abrir el formulario D:");
+			}
+		}
+
+		private void buttonEliminarMedio_Click(object sender, EventArgs e)
+		{
+			if (origen == 1)
+			{
+				//colas
+			}
+			else if (origen == 2)
+			{
+				//matriz
+			}
+			else if (origen == 3)
+			{
+				//listas
+
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+
+				lista.EliminarMedioLista();
+				lista.ImprimirLista(dataGridView1);
+			}
+			else if (origen == 4)
+			{
+				//pilas
+				Pila pila = Pila.ObtenerInstancia();
 				
 			}
 			else
 			{
+				MessageBox.Show("Ocurrio un error al abrir el formulario D:");
+			}
+		}
+
+		private void buttonEliminarFinal_Click(object sender, EventArgs e)
+		{
+			if (origen == 1)
+			{
+				//colas
+			}
+			else if (origen == 2)
+			{
+				//matriz
+			}
+			else if (origen == 3)
+			{
+				//listas
+
+				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+
+				lista.EliminarFinalLista();
+				lista.ImprimirLista(dataGridView1);
+			}
+			else if(origen == 4)
+			{
 				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.EliminarFinalPila();
+				dataGridView1.Rows.Clear();
+				pila.ImprimirDatos(dataGridView1);
+			}
+			else
+			{
+				MessageBox.Show("Ocurrio un error al abrir el formulario D:");
 			}
 		}
 	}

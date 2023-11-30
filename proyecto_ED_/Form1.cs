@@ -77,17 +77,19 @@ namespace proyecto_ED_
 
 		private void buttonEditarColas_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormEditar(1));
 			OcultarSubmenu();
 		}
 
 		private void buttonMostarColas_Click(object sender, EventArgs e)
 		{
-			//abrilFormulario(new FormMostrar(1));
+			abrilFormulario(new FormMostrar(1));
 			OcultarSubmenu();
 		}
 
 		private void buttonOrdenarColas_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormOrdenar(1));
 			OcultarSubmenu();
 		}
 
@@ -118,23 +120,25 @@ namespace proyecto_ED_
 
 		private void buttonEditarMatrices_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormEditar(2));
 			OcultarSubmenu();
 		}
 
 		private void buttonMostrarMatrices_Click(object sender, EventArgs e)
 		{ 
-			//abrilFormulario(new FormMostrar(2));
+			abrilFormulario(new FormMostrar(2));
 			OcultarSubmenu();
 		}
 
 		private void buttonOrdenarMatrices_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormOrdenar(2));
 			OcultarSubmenu();
 		}
 
 		private void buttonBuscarMatrices_Click(object sender, EventArgs e)
 		{
-			//abrilFormulario();
+			abrilFormulario(new FormBuscar(2));
 			OcultarSubmenu();
 		}
 		#endregion
@@ -175,6 +179,7 @@ namespace proyecto_ED_
 		private void buttonOrdenarListas_Click(object sender, EventArgs e)
 		{
 			OcultarSubmenu();
+			abrilFormulario(new FormOrdenar(3));
 		}
 
 		private void buttonBuscarListas_Click(object sender, EventArgs e)
@@ -204,17 +209,19 @@ namespace proyecto_ED_
 
 		private void buttonEditarPilas_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormEditar(4));
 			OcultarSubmenu();
 		}
 
 		private void buttonMostrarPilas_Click(object sender, EventArgs e)
 		{
-			//abrilFormulario(new FormMostrar(4));
+			abrilFormulario(new FormMostrar(4));
 			OcultarSubmenu();
 		}
 
 		private void buttonOrdenarPilas_Click(object sender, EventArgs e)
 		{
+			abrilFormulario(new FormEditar(4));
 			OcultarSubmenu();
 		}
 

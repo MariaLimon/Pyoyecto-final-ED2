@@ -36,6 +36,14 @@ namespace proyecto_ED_
 			}
 		}
 
+		//
+		private void LimpiarTexBox()
+		{
+			textBoxNombrePelicula.Clear();
+			textBoxGeneroPelicula.Clear();
+			textBoxDuracionPelicula.Clear();
+			textBoxAño.Clear();
+		}
 
 
 		//cerrar fromulario
@@ -52,6 +60,7 @@ namespace proyecto_ED_
 		{
 			contadorGuardarFrente++;
 			listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
+			Pila pila = Pila.ObtenerInstancia();
 
 			Peliculas pelicula = new Peliculas();
 			{
@@ -83,14 +92,14 @@ namespace proyecto_ED_
 
 				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
 				lista.InsertarFrenteLista(pelicula);
-
-
+				
 			}
 			else
 			{
 				//pilas
+				pila.InsertarFrentePila(pelicula);
 			}
-
+			LimpiarTexBox();
 
 		}
 
@@ -130,6 +139,7 @@ namespace proyecto_ED_
 			{
 				//pilas
 			}
+			LimpiarTexBox();
 		}
 
 		private void buttonGuardarFinalColas_Click(object sender, EventArgs e)
@@ -167,6 +177,7 @@ namespace proyecto_ED_
 			{
 				//pilas
 			}
+			LimpiarTexBox();
 		}
 
 

@@ -21,3 +21,4 @@ C:\Users\Usuario\Desktop\proyecto_ED_\proyecto_ED_\obj\Debug\net7.0-windows\proy
 C:\Users\Usuario\Desktop\proyecto_ED_\proyecto_ED_\obj\Debug\net7.0-windows\proyecto_ED_.FormMostrar.resources
 C:\Users\Usuario\Desktop\proyecto_ED_\proyecto_ED_\obj\Debug\net7.0-windows\proyecto_ED_.FormBuscar.resources
 C:\Users\Usuario\Desktop\proyecto_ED_\proyecto_ED_\obj\Debug\net7.0-windows\proyecto_ED_.Vistas.FormEditar.resources
+C:\Users\Usuario\Desktop\proyecto_ED_\proyecto_ED_\obj\Debug\net7.0-windows\proyecto_ED_.Vistas.FormOrdenar.resources

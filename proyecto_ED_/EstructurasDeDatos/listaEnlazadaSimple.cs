@@ -1,10 +1,12 @@
 ﻿using proyecto_ED_.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace proyecto_ED_.EstructurasDeDatos
@@ -71,17 +73,8 @@ namespace proyecto_ED_.EstructurasDeDatos
 		}
 
 
-		public IEnumerable<Peliculas> ObtenerPeliculas()
-		{
-			Nodo actual = primero;
-			while (actual != null)
-			{
-				yield return actual.getDatos();
-				actual = actual.getSiguiente();
-			}
-		}
 
-		public void ImprimirLista()
+		public void ImprimirLista(DataGridView dataGridView)
         {
             if (ListaVacia())
             {
@@ -89,21 +82,22 @@ namespace proyecto_ED_.EstructurasDeDatos
             }
             else
             {
-                Nodo actual = primero;
-                while (actual != null)
-                {
-                    MessageBox.Show($"{actual.getDatos()}");
-                    
-                    actual = actual.getSiguiente();
-                }
-                MessageBox.Show("->null");//enviar a un mendajebox
-            }
+				Nodo actual = primero;
+				dataGridView.Rows.Clear(); // Limpiar el DataGridView antes de agregar nuevos datos
+
+				while (actual != null)
+				{
+					Peliculas pelicula = actual.getDatos();
+					int fila = dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
+					actual = actual.getSiguiente();
+				}
+			}
         }
 
 
 
         //buscar un elemento especifico en la lista
-        public void BuscarElemento(string elementoBuscado)
+        public void BuscarElemento(string elementoBuscado,DataGridView dataGridView)
         {
             int centinela = -1;
             //Nodo elemento = elementoBuscado;
@@ -120,17 +114,21 @@ namespace proyecto_ED_.EstructurasDeDatos
                     if (actual.getDatos().Nombre == elementoBuscado)
                     {
                         centinela = 1;
+						Peliculas pelicula= actual.getDatos();
+						int fila = dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
 						MessageBox.Show("el elemento se encuentra en la lista");
                         break;
                     }
                     else
                     {
                         actual = actual.getSiguiente();
+						
                     }
                 }
                 if (centinela == -1)
                 {
-					    MessageBox.Show("el elemento NO encuentra en la lista");
+					
+					  MessageBox.Show("el elemento NO encuentra en la lista");
                 }
             }
         }
@@ -280,8 +278,148 @@ namespace proyecto_ED_.EstructurasDeDatos
 
 			return eliminarElemento; // devuelve los datos eliminados
 		}
+		public void EliminarMedioLista()
+		{
+			if (ListaVacia())
+			{
+				MessageBox.Show("La lista esta vacia");
 
-        
+			}
+			else if (primero.getSiguiente() == null)
+			{
+				primero = null;
+				MessageBox.Show("La película se eliminó de la lista");
+			}
+			else
+			{
+				int longitud = Longitud();
+				Nodo actual = primero;
+				int iterador = 1;
+				Nodo anterior = null;
+
+				while (actual.getSiguiente() != null && iterador < longitud / 2)
+				{
+					anterior = actual;
+					iterador++;
+					actual = actual.getSiguiente();
+				}
+
+				if (anterior != null)
+				{
+					anterior.setSiguiente(actual.getSiguiente());
+				}
+				else
+				{
+					primero = actual.getSiguiente();
+				}
+
+				MessageBox.Show("La película se eliminó de la lista");
+			}
+		
+		}
+
+		public void EliminarFinalLista()
+		{
+			if (ListaVacia())
+			{
+				MessageBox.Show("La lista esta vacia");
+
+			}
+			else if (primero.getSiguiente() == null)
+			{
+				// Si solo hay un elemento en la lista
+				primero = null;
+				ultimo = null;
+				MessageBox.Show("La película se eliminó de la lista");
+			}
+			else
+			{
+				Nodo actual = primero;
+				Nodo anterior = null;
+
+				while (actual.getSiguiente() != null)
+				{
+					anterior = actual;
+					actual = actual.getSiguiente();
+				}
+
+				anterior.setSiguiente(null);
+				ultimo = anterior;
+				MessageBox.Show("La película se eliminó de la lista");
+			}
+		
+		}
+
+		public void OrdenarDecendente()
+		{
+			if (ListaVacia())
+			{
+				MessageBox.Show("la lista esta vacia");
+			}
+			else
+			{
+				bool terminado;
+				Nodo temporal;
+				do
+				{
+					terminado = false;
+					Nodo actual = primero;
+					Nodo siguiente = primero.getSiguiente();
+
+					while (siguiente != null)
+					{
+						if (actual.getDatos().Year < siguiente.getDatos().Year)
+						{
+							// Intercambiar los datos de las películas si el año es menor
+							temporal = new Nodo(actual.getDatos());
+							actual.setDatos(siguiente.getDatos());
+							siguiente.setDatos(temporal.getDatos());
+
+							terminado = true;
+						}
+
+						actual = siguiente;
+						siguiente = siguiente.getSiguiente();
+					}
+				} while (terminado);
+			}
+		}
+
+		public void OrdenarAcendente()
+		{
+			if (ListaVacia())
+			{
+				MessageBox.Show("la lista esta vacia");
+			}
+			else
+			{
+				bool terminado;
+				Nodo temporal;
+				do
+				{
+					terminado = false;
+					Nodo actual = primero;
+					Nodo siguiente = primero.getSiguiente();
+
+					while (siguiente != null)
+					{
+						if (actual.getDatos().Year > siguiente.getDatos().Year)
+						{
+							// Intercambiar los datos de las películas si el año es menor
+							temporal = new Nodo(actual.getDatos());
+							actual.setDatos(siguiente.getDatos());
+							siguiente.setDatos(temporal.getDatos());
+
+							terminado = true;
+						}
+
+						actual = siguiente;
+						siguiente = siguiente.getSiguiente();
+					}
+				} while (terminado);
+			}
+		}
+
 
 	}
 
