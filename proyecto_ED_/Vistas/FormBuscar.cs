@@ -42,8 +42,8 @@ namespace proyecto_ED_
 			{
 				//listas
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
-				lista.BuscarElemento(textBoxNombrePelicula.Text);
-
+				lista.BuscarElemento(textBoxNombrePelicula.Text, dataGridView1);
+			
 			}
 			else
 			{

@@ -63,6 +63,7 @@
 			buttonEliminarMedio.TabIndex = 2;
 			buttonEliminarMedio.Text = "Eliminar del medio";
 			buttonEliminarMedio.UseVisualStyleBackColor = true;
+			buttonEliminarMedio.Click += buttonEliminarMedio_Click;
 			// 
 			// buttonEliminarFinal
 			// 
@@ -72,6 +73,7 @@
 			buttonEliminarFinal.TabIndex = 1;
 			buttonEliminarFinal.Text = "Eliminar del final";
 			buttonEliminarFinal.UseVisualStyleBackColor = true;
+			buttonEliminarFinal.Click += buttonEliminarFinal_Click;
 			// 
 			// buttonEliminarFrente
 			// 

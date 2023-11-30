@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			panelGuardarColas = new Panel();
+			buttonOrdenarAscendente = new Button();
 			textBoxResultadoGuardar = new TextBox();
 			buttonOrdenarDescendente = new Button();
-			buttonOrdenarAscendente = new Button();
 			dataGridView1 = new DataGridView();
 			Cid = new DataGridViewTextBoxColumn();
 			Cnombre = new DataGridViewTextBoxColumn();
@@ -54,6 +54,16 @@
 			panelGuardarColas.Size = new Size(668, 216);
 			panelGuardarColas.TabIndex = 26;
 			// 
+			// buttonOrdenarAscendente
+			// 
+			buttonOrdenarAscendente.Location = new Point(403, 84);
+			buttonOrdenarAscendente.Name = "buttonOrdenarAscendente";
+			buttonOrdenarAscendente.Size = new Size(120, 25);
+			buttonOrdenarAscendente.TabIndex = 17;
+			buttonOrdenarAscendente.Text = "Ascendente";
+			buttonOrdenarAscendente.UseVisualStyleBackColor = true;
+			buttonOrdenarAscendente.Click += buttonOrdenarAscendente_Click;
+			// 
 			// textBoxResultadoGuardar
 			// 
 			textBoxResultadoGuardar.BackColor = Color.FromArgb(135, 20, 31);
@@ -73,15 +83,7 @@
 			buttonOrdenarDescendente.TabIndex = 0;
 			buttonOrdenarDescendente.Text = "Descendente";
 			buttonOrdenarDescendente.UseVisualStyleBackColor = true;
-			// 
-			// buttonOrdenarAscendente
-			// 
-			buttonOrdenarAscendente.Location = new Point(403, 84);
-			buttonOrdenarAscendente.Name = "buttonOrdenarAscendente";
-			buttonOrdenarAscendente.Size = new Size(120, 25);
-			buttonOrdenarAscendente.TabIndex = 17;
-			buttonOrdenarAscendente.Text = "Ascendente";
-			buttonOrdenarAscendente.UseVisualStyleBackColor = true;
+			buttonOrdenarDescendente.Click += buttonOrdenarDescendente_Click;
 			// 
 			// dataGridView1
 			// 
@@ -89,13 +91,13 @@
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
 			dataGridView1.GridColor = Color.Black;
-			dataGridView1.Location = new Point(25, 75);
+			dataGridView1.Location = new Point(25, 60);
 			dataGridView1.Margin = new Padding(3, 2, 3, 2);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(615, 150);
+			dataGridView1.Size = new Size(615, 241);
 			dataGridView1.TabIndex = 27;
 			// 
 			// Cid

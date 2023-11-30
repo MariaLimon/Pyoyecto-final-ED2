@@ -16,6 +16,9 @@
     <Compile Update="Vistas\FormMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vistas\FormOrdenar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vistas\FormRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
