@@ -221,7 +221,7 @@ namespace proyecto_ED_
 
 		private void buttonOrdenarPilas_Click(object sender, EventArgs e)
 		{
-			abrilFormulario(new FormEditar(4));
+			abrilFormulario(new FormOrdenar(4));
 			OcultarSubmenu();
 		}
 

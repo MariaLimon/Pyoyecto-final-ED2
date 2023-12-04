@@ -15,7 +15,7 @@ namespace proyecto_ED_.Modelo
         public int Year { get; set; }
 
         /*
-        public Peliculas(string nombre, string genero, string duracion, string year)
+        public Peliculas(string nombre, string genero, string duracion, int year)
         {
             Nombre = nombre;
             Genero = genero;

@@ -31,7 +31,6 @@
 			buttonCerarForm = new Button();
 			textBoxAño = new TextBox();
 			labelAño = new Label();
-			label1 = new Label();
 			textBoxNombrePelicula = new TextBox();
 			textBoxGeneroPelicula = new TextBox();
 			textBoxDuracionPelicula = new TextBox();
@@ -67,10 +66,10 @@
 			textBoxAño.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxAño.BorderStyle = BorderStyle.None;
 			textBoxAño.ForeColor = Color.White;
-			textBoxAño.Location = new Point(269, 229);
+			textBoxAño.Location = new Point(129, 248);
 			textBoxAño.MaxLength = 4;
 			textBoxAño.Name = "textBoxAño";
-			textBoxAño.Size = new Size(100, 16);
+			textBoxAño.Size = new Size(134, 16);
 			textBoxAño.TabIndex = 24;
 			// 
 			// labelAño
@@ -84,24 +83,14 @@
 			labelAño.TabIndex = 23;
 			labelAño.Text = "Año de lanzamiento:";
 			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.ForeColor = SystemColors.ButtonFace;
-			label1.Location = new Point(310, 179);
-			label1.Name = "label1";
-			label1.Size = new Size(51, 15);
-			label1.TabIndex = 22;
-			label1.Text = "minutos";
-			// 
 			// textBoxNombrePelicula
 			// 
 			textBoxNombrePelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxNombrePelicula.BorderStyle = BorderStyle.None;
 			textBoxNombrePelicula.ForeColor = Color.White;
-			textBoxNombrePelicula.Location = new Point(204, 73);
+			textBoxNombrePelicula.Location = new Point(129, 94);
 			textBoxNombrePelicula.Name = "textBoxNombrePelicula";
-			textBoxNombrePelicula.Size = new Size(100, 16);
+			textBoxNombrePelicula.Size = new Size(134, 16);
 			textBoxNombrePelicula.TabIndex = 21;
 			// 
 			// textBoxGeneroPelicula
@@ -109,9 +98,9 @@
 			textBoxGeneroPelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxGeneroPelicula.BorderStyle = BorderStyle.None;
 			textBoxGeneroPelicula.ForeColor = Color.White;
-			textBoxGeneroPelicula.Location = new Point(192, 138);
+			textBoxGeneroPelicula.Location = new Point(129, 146);
 			textBoxGeneroPelicula.Name = "textBoxGeneroPelicula";
-			textBoxGeneroPelicula.Size = new Size(100, 16);
+			textBoxGeneroPelicula.Size = new Size(134, 16);
 			textBoxGeneroPelicula.TabIndex = 20;
 			// 
 			// textBoxDuracionPelicula
@@ -119,10 +108,11 @@
 			textBoxDuracionPelicula.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxDuracionPelicula.BorderStyle = BorderStyle.None;
 			textBoxDuracionPelicula.ForeColor = Color.White;
-			textBoxDuracionPelicula.Location = new Point(204, 179);
+			textBoxDuracionPelicula.Location = new Point(129, 199);
 			textBoxDuracionPelicula.MaxLength = 3;
 			textBoxDuracionPelicula.Name = "textBoxDuracionPelicula";
-			textBoxDuracionPelicula.Size = new Size(100, 16);
+			textBoxDuracionPelicula.PlaceholderText = "duración en minutos";
+			textBoxDuracionPelicula.Size = new Size(134, 16);
 			textBoxDuracionPelicula.TabIndex = 19;
 			// 
 			// labelDuracion
@@ -141,7 +131,7 @@
 			labelGenero.AutoSize = true;
 			labelGenero.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			labelGenero.ForeColor = SystemColors.ButtonFace;
-			labelGenero.Location = new Point(129, 139);
+			labelGenero.Location = new Point(129, 124);
 			labelGenero.Name = "labelGenero";
 			labelGenero.Size = new Size(57, 19);
 			labelGenero.TabIndex = 17;
@@ -192,7 +182,7 @@
 			// 
 			// buttonBuscar
 			// 
-			buttonBuscar.Location = new Point(337, 68);
+			buttonBuscar.Location = new Point(295, 85);
 			buttonBuscar.Name = "buttonBuscar";
 			buttonBuscar.Size = new Size(66, 25);
 			buttonBuscar.TabIndex = 26;
@@ -210,7 +200,6 @@
 			Controls.Add(panelGuardarColas);
 			Controls.Add(textBoxAño);
 			Controls.Add(labelAño);
-			Controls.Add(label1);
 			Controls.Add(textBoxNombrePelicula);
 			Controls.Add(textBoxGeneroPelicula);
 			Controls.Add(textBoxDuracionPelicula);
@@ -231,7 +220,6 @@
 		private Button buttonCerarForm;
 		public TextBox textBoxAño;
 		private Label labelAño;
-		private Label label1;
 		public TextBox textBoxNombrePelicula;
 		public TextBox textBoxGeneroPelicula;
 		public TextBox textBoxDuracionPelicula;
