@@ -34,7 +34,6 @@
 			textBoxDuracionPelicula = new TextBox();
 			textBoxGeneroPelicula = new TextBox();
 			textBoxNombrePelicula = new TextBox();
-			label1 = new Label();
 			buttonCerarForm = new Button();
 			panelGuardarColas = new Panel();
 			textBoxResultadoGuardar = new TextBox();
@@ -51,7 +50,7 @@
 			labelNombre.AutoSize = true;
 			labelNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
 			labelNombre.ForeColor = SystemColors.ButtonFace;
-			labelNombre.Location = new Point(84, 71);
+			labelNombre.Location = new Point(84, 49);
 			labelNombre.Name = "labelNombre";
 			labelNombre.Size = new Size(60, 17);
 			labelNombre.TabIndex = 0;
@@ -62,7 +61,7 @@
 			labelGenero.AutoSize = true;
 			labelGenero.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			labelGenero.ForeColor = SystemColors.ButtonFace;
-			labelGenero.Location = new Point(84, 115);
+			labelGenero.Location = new Point(84, 98);
 			labelGenero.Name = "labelGenero";
 			labelGenero.Size = new Size(57, 19);
 			labelGenero.TabIndex = 1;
@@ -84,10 +83,11 @@
 			textBoxDuracionPelicula.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxDuracionPelicula.BorderStyle = BorderStyle.None;
 			textBoxDuracionPelicula.ForeColor = Color.White;
-			textBoxDuracionPelicula.Location = new Point(159, 155);
+			textBoxDuracionPelicula.Location = new Point(84, 175);
 			textBoxDuracionPelicula.MaxLength = 3;
 			textBoxDuracionPelicula.Name = "textBoxDuracionPelicula";
-			textBoxDuracionPelicula.Size = new Size(100, 16);
+			textBoxDuracionPelicula.PlaceholderText = "duración en minutos";
+			textBoxDuracionPelicula.Size = new Size(145, 16);
 			textBoxDuracionPelicula.TabIndex = 7;
 			textBoxDuracionPelicula.KeyPress += textBoxDuracionPelicula_KeyPress;
 			// 
@@ -96,9 +96,9 @@
 			textBoxGeneroPelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxGeneroPelicula.BorderStyle = BorderStyle.None;
 			textBoxGeneroPelicula.ForeColor = Color.White;
-			textBoxGeneroPelicula.Location = new Point(147, 114);
+			textBoxGeneroPelicula.Location = new Point(84, 120);
 			textBoxGeneroPelicula.Name = "textBoxGeneroPelicula";
-			textBoxGeneroPelicula.Size = new Size(100, 16);
+			textBoxGeneroPelicula.Size = new Size(145, 16);
 			textBoxGeneroPelicula.TabIndex = 8;
 			// 
 			// textBoxNombrePelicula
@@ -106,20 +106,10 @@
 			textBoxNombrePelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxNombrePelicula.BorderStyle = BorderStyle.None;
 			textBoxNombrePelicula.ForeColor = Color.White;
-			textBoxNombrePelicula.Location = new Point(159, 70);
+			textBoxNombrePelicula.Location = new Point(84, 69);
 			textBoxNombrePelicula.Name = "textBoxNombrePelicula";
-			textBoxNombrePelicula.Size = new Size(100, 16);
+			textBoxNombrePelicula.Size = new Size(145, 16);
 			textBoxNombrePelicula.TabIndex = 9;
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.ForeColor = SystemColors.ButtonFace;
-			label1.Location = new Point(265, 155);
-			label1.Name = "label1";
-			label1.Size = new Size(51, 15);
-			label1.TabIndex = 10;
-			label1.Text = "minutos";
 			// 
 			// buttonCerarForm
 			// 
@@ -208,10 +198,10 @@
 			textBoxAño.BackColor = Color.FromArgb(135, 20, 30);
 			textBoxAño.BorderStyle = BorderStyle.None;
 			textBoxAño.ForeColor = Color.White;
-			textBoxAño.Location = new Point(224, 205);
+			textBoxAño.Location = new Point(84, 224);
 			textBoxAño.MaxLength = 4;
 			textBoxAño.Name = "textBoxAño";
-			textBoxAño.Size = new Size(100, 16);
+			textBoxAño.Size = new Size(145, 16);
 			textBoxAño.TabIndex = 15;
 			// 
 			// FormRegistrar
@@ -224,7 +214,6 @@
 			Controls.Add(labelAño);
 			Controls.Add(panelGuardarColas);
 			Controls.Add(buttonCerarForm);
-			Controls.Add(label1);
 			Controls.Add(textBoxNombrePelicula);
 			Controls.Add(textBoxGeneroPelicula);
 			Controls.Add(textBoxDuracionPelicula);
@@ -244,7 +233,6 @@
 		private Label labelNombre;
 		private Label labelGenero;
 		private Label labelDuracion;
-		private Label label1;
 		private Button buttonCerarForm;
 		private Panel panelGuardarColas;
 		private Button buttonGuardarMedio;

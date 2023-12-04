@@ -32,9 +32,15 @@ namespace proyecto_ED_.Vistas
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 				lista.ImprimirLista(dataGridView1);
 			}
-			else
+			else if(origen == 4)
 			{
 				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.ImprimirDatos(dataGridView1);
+			}
+			else
+			{
+				MessageBox.Show("hubo un error al intentar entrar al formulario");
 			}
 		}
 
@@ -59,6 +65,9 @@ namespace proyecto_ED_.Vistas
 			else
 			{
 				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.OrdenarDecendentePila();
+				pila.ImprimirDatos(dataGridView1);
 			}
 		}
 
@@ -82,6 +91,9 @@ namespace proyecto_ED_.Vistas
 			else
 			{
 				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.OrdenarAscendentePila();
+				pila.ImprimirDatos(dataGridView1);
 			}
 		}
 	}

@@ -92,12 +92,16 @@ namespace proyecto_ED_
 
 				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
 				lista.InsertarFrenteLista(pelicula);
-				
+
 			}
-			else
+			else if (origen == 4)
 			{
 				//pilas
 				pila.InsertarFrentePila(pelicula);
+			}
+			else
+			{
+				MessageBox.Show("hubo un error al intentar entrar al formulario");
 			}
 			LimpiarTexBox();
 
@@ -135,9 +139,13 @@ namespace proyecto_ED_
 				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
 				lista.InsertarMedioLista(pelicula);
 			}
-			else
+			else if (origen == 4)
 			{
 				//pilas
+			}
+			else
+			{
+				MessageBox.Show("hubo un error al intentar entrar al formulario");
 			}
 			LimpiarTexBox();
 		}
@@ -173,9 +181,16 @@ namespace proyecto_ED_
 				peliculaAgregada[contadorGuardarFrente].id = contadorGuardarFrente;
 				lista.InsertarFinalLista(pelicula);
 			}
-			else
+			else if (origen == 4)
 			{
 				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.InsertarFinalPila(pelicula);
+
+			}
+			else
+			{
+				MessageBox.Show("hubo un error al intentar entrar al formulario");
 			}
 			LimpiarTexBox();
 		}

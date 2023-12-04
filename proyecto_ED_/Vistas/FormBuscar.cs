@@ -43,12 +43,19 @@ namespace proyecto_ED_
 				//listas
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 				lista.BuscarElemento(textBoxNombrePelicula.Text, dataGridView1);
-			
+
+			}
+			else if (origen == 4)
+			{
+				//pilas
+				Pila pila = Pila.ObtenerInstancia();
+				pila.BuscarPila(textBoxNombrePelicula.Text, dataGridView1);
 			}
 			else
 			{
-				//pilas
+				MessageBox.Show("hubo un error al intentar entrar al formulario");
 			}
+			textBoxNombrePelicula.Clear();
 		}
 
 
