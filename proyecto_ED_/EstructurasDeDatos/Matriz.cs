@@ -30,24 +30,6 @@ namespace proyecto_ED_.EstructurasDeDatos
 			return true;
 		}
 
-		public void AgregarPc(Peliculas[] matrizPeliculas)
-		{
-			int contador = 0;
-			if (MatrizLlena(matrizPeliculas))
-			{
-				MessageBox.Show("Array lleno joven");
-
-			}
-			else
-			{
-
-				//matrizPeliculas[contador] = compu;
-				contador++;
-				MessageBox.Show("Se guardaron los datos exitosamente");
-
-			}
-
-		}
             public bool MatrizVacia(Peliculas[] matrizPeliculas)
 			{
 				if (matrizPeliculas[0] != null)
@@ -125,6 +107,53 @@ namespace proyecto_ED_.EstructurasDeDatos
             }
 		}
 
+        public void InsertarFrenteMatriz(Peliculas[] matrizPeliculas, Peliculas peliNueva)
+        {
+            //Peliculas actual = matrizPeliculas[0];
 
-	}
+            if (MatrizLlena(matrizPeliculas))
+            {
+                MessageBox.Show("La matriz esta llena no se puede incertar una nueva pelicula");
+            }
+            else if (MatrizVacia(matrizPeliculas))
+            {
+                matrizPeliculas[0] = peliNueva;
+                MessageBox.Show("La pelicula se agrego en la primera pocicion");
+            }
+            else
+            {
+
+                int primerEspacioVacio = 0;
+                while (matrizPeliculas[primerEspacioVacio] != null)
+                {
+                    primerEspacioVacio++;
+                }
+
+                // Desplaza todos los elementos hacia la derecha a partir del último elemento no nulo
+                for (int i = primerEspacioVacio - 1; i >= 0; i--)
+                {
+                    matrizPeliculas[i + 1] = matrizPeliculas[i];
+                }
+
+                // Ahora puedes colocar el nuevo elemento en el primer espacio vacío
+                matrizPeliculas[0] = peliNueva;
+            }
+        }
+        public void incertarfinal(Peliculas[] matrizPeliculas, Peliculas peliNueva)
+        {
+            if (MatrizLlena(matrizPeliculas))
+            {
+                MessageBox.Show("La matriz esta llena no se puede incertar una nueva pelicula");
+            }
+            else
+            {
+                int cont = 0;
+                while (matrizPeliculas[cont] != null)
+                {
+                    cont++;
+                }
+                matrizPeliculas[cont] = peliNueva;
+            }
+        }
+    }
 }
