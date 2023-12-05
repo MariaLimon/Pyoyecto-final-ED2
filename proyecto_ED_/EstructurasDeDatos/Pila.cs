@@ -37,15 +37,6 @@ namespace proyecto_ED_.EstructurasDeDatos
 		public bool PilaVacia()
 		{
 			return _cima == -1 ? true : false;
-			/*
-            if (_cima == -1)
-            {
-                return true;
-            }
-			return false;
-            /*otra forma de hacerlo es con operador ternario solo se puede tener dos opciones
-                return _cima == -1 ? false : true;
-             */
 		}
 
 		public bool PilaLlena()
@@ -72,11 +63,13 @@ namespace proyecto_ED_.EstructurasDeDatos
 		//}
 
 		// Insertar elementos en la pila: Push
-		public string InsertarFrentePila(Peliculas nuevaPeli)
+		public void InsertarFrentePila(Peliculas nuevaPeli, TextBox mensaje)
 		{
+			
 			if (PilaLlena())
 			{
-				return "La pila está llena";
+				mensaje.Text = "La pila está llena";
+				
 			}
 			else
 			{
@@ -86,61 +79,46 @@ namespace proyecto_ED_.EstructurasDeDatos
 				}
 				listaPila[0] = nuevaPeli;
 				_cima++;
-				return "La película se agregó al frente de la pila";
+				mensaje.Text = "La película se agregó al frente de la pila";
 			}
 		}
-		public string InsertarFinalPila(Peliculas nuevaPeli)
+		public void InsertarFinalPila(Peliculas nuevaPeli, TextBox mensaje)
 		{
 			if (PilaLlena())
 			{
-				return "la pila esta llena";
+				mensaje.Text = "la pila esta llena";
 			}
 			else
 			{
 				_cima++;
 				listaPila[_cima] = nuevaPeli;
-				return "la pelicula se agrego a la pila";
+
+				mensaje.Text = "la pelicula se agrego al final de la pila";
 			}
 		}
 
 
-		// Extraer un elemento de la pila: Pop
-		//public Peliculas EliminarFrentePila()
-		//{
-		//	if (PilaVacia())
-		//	{
-		//		MessageBox.Show("la pila esta vacia");
-		//		return null;
-		//	}
-		//	else
-		//	{ 
-		//		//Peliculas auxiliar = listaPila[]; 
-		//		//--;
-		//		//MessageBox.Show("se elimino de la pila");
-		//		//return auxiliar;
-		//	}
-		//}
-		public Peliculas EliminarFinalPila()
+		public Peliculas EliminarFinalPila(TextBox mensaje)
 		{
 			if (PilaVacia())
 			{
-				MessageBox.Show("la pila esta vacia");
+				mensaje.Text="la pila esta vacia";
 				return null;
 			}
 			else
 			{
 				Peliculas auxiliar = listaPila[_cima];
 				_cima--;
-				MessageBox.Show("se elimino de la pila");
+				mensaje.Text = "se elimino del final de la pila";
 				return auxiliar;
 			}
 		}
 
-		public Peliculas EliminarFrentePila()
+		public Peliculas EliminarFrentePila(TextBox mensaje)
 		{
 			if (PilaVacia())
 			{
-				MessageBox.Show("La pila está vacía");
+				mensaje.Text = "La pila está vacía";
 				return null;
 			}
 			else
@@ -151,34 +129,18 @@ namespace proyecto_ED_.EstructurasDeDatos
 					listaPila[i] = listaPila[i + 1];
 				}
 				_cima--;
-				MessageBox.Show("Se eliminó de la pila");
+				mensaje.Text = "Se eliminó del frente de la pila";
 				return auxiliar;
 			}
 		}
 
-		//limpiar elementos de la pila: LimpiarPila
-		//public bool Limpiar()
-		//{
-		//	if (PilaVacia())
-		//	{
-		//		return false;
-		//	}
-		//	else
-		//	{
-		//		while (!PilaVacia())
-		//		{
-		//			EliminarFrentePila();
-		//		}
-		//		return true;
-		//	}
-		//}
 
 		// Imprimir los datos de la pila: ImprimirDatos
-		public void ImprimirDatos(DataGridView dataGridView)
+		public void ImprimirDatos(DataGridView dataGridView, TextBox mensaje)
 		{
 			if (PilaVacia())
 			{
-				MessageBox.Show("La pila está vacía");
+				mensaje.Text = "La pila está vacía";
 			}
 			else
 			{
@@ -186,7 +148,15 @@ namespace proyecto_ED_.EstructurasDeDatos
 				for (int i = 0; i < _cima + 1; i++)
 				{
 					Peliculas pelicula = listaPila[i];
-					int fila = dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
+					if (listaPila[i] != null)
+					{
+
+						dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
+					}
+					else
+					{
+						MessageBox.Show("algo salio mal con una pelicula");
+					}
 				}
 			}
 		}
@@ -207,7 +177,7 @@ namespace proyecto_ED_.EstructurasDeDatos
 					if (pelicula.Nombre == nombre)
 					{
 						centinela = 1;
-						int fila = dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
+						dataGridView.Rows.Add(pelicula.id, pelicula.Nombre, pelicula.Genero, pelicula.Duracion, pelicula.Year);
 						break;
 					}
 				}
@@ -220,8 +190,7 @@ namespace proyecto_ED_.EstructurasDeDatos
 
 
 
-		//editar datos de la pila
-		// Buscar los datos de la pila: BuscarPila
+		//editar datos de la pila: EditarPila
 		public Peliculas EditarPila(string nombre)
 		{
 			int centinela = -1;
@@ -253,7 +222,36 @@ namespace proyecto_ED_.EstructurasDeDatos
 		}
 
 
-
+		//editar datos de la pila: EditarPila
+		public Peliculas EiminarPorNombrePila(string nombre)
+		{
+			int centinela = -1;
+			if (PilaVacia())
+			{
+				MessageBox.Show("La pila está vacía");
+				return null;
+			}
+			else
+			{
+				for (int i = 0; i < _cima + 1; i++)
+				{
+					Peliculas pelicula = listaPila[i];
+					if (pelicula.Nombre == nombre)
+					{
+						centinela = 1;
+						return pelicula;
+						break;
+					}
+					return null;
+				}
+				if (centinela == -1)
+				{
+					MessageBox.Show("el elemento no se encuentra en la pila");
+					return null;
+				}
+				return null;
+			}
+		}
 
 		public void OrdenarDecendentePila()
 		{

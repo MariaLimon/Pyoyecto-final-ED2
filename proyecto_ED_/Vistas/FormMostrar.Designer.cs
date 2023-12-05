@@ -39,8 +39,10 @@
 			panelGuardarColas = new Panel();
 			panelMostrar = new Panel();
 			panel1 = new Panel();
+			textBoxResultadoGuardar = new TextBox();
 			panelContenedor.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			panelGuardarColas.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panelContenedor
@@ -53,8 +55,9 @@
 			panelContenedor.Controls.Add(panel1);
 			panelContenedor.Dock = DockStyle.Fill;
 			panelContenedor.Location = new Point(0, 0);
+			panelContenedor.Margin = new Padding(3, 4, 3, 4);
 			panelContenedor.Name = "panelContenedor";
-			panelContenedor.Size = new Size(668, 522);
+			panelContenedor.Size = new Size(763, 696);
 			panelContenedor.TabIndex = 2;
 			// 
 			// dataGridView1
@@ -63,44 +66,53 @@
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
 			dataGridView1.GridColor = Color.Black;
-			dataGridView1.Location = new Point(59, 60);
-			dataGridView1.Margin = new Padding(3, 2, 3, 2);
+			dataGridView1.Location = new Point(67, 80);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(553, 221);
+			dataGridView1.Size = new Size(632, 321);
 			dataGridView1.TabIndex = 16;
 			// 
 			// Cid
 			// 
 			Cid.HeaderText = "Id";
+			Cid.MinimumWidth = 6;
 			Cid.Name = "Cid";
 			Cid.ReadOnly = true;
+			Cid.Width = 125;
 			// 
 			// Cnombre
 			// 
 			Cnombre.HeaderText = "Nombre";
+			Cnombre.MinimumWidth = 6;
 			Cnombre.Name = "Cnombre";
 			Cnombre.ReadOnly = true;
+			Cnombre.Width = 125;
 			// 
 			// Cgenero
 			// 
 			Cgenero.HeaderText = "Genero";
+			Cgenero.MinimumWidth = 6;
 			Cgenero.Name = "Cgenero";
 			Cgenero.ReadOnly = true;
+			Cgenero.Width = 125;
 			// 
 			// Cduracion
 			// 
 			Cduracion.HeaderText = "Duración";
+			Cduracion.MinimumWidth = 6;
 			Cduracion.Name = "Cduracion";
 			Cduracion.ReadOnly = true;
+			Cduracion.Width = 125;
 			// 
 			// Cyear
 			// 
 			Cyear.HeaderText = "Año de lanzamiento";
+			Cyear.MinimumWidth = 6;
 			Cyear.Name = "Cyear";
 			Cyear.ReadOnly = true;
+			Cyear.Width = 125;
 			// 
 			// buttonCerarForm
 			// 
@@ -111,9 +123,10 @@
 			buttonCerarForm.FlatStyle = FlatStyle.Flat;
 			buttonCerarForm.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			buttonCerarForm.ForeColor = SystemColors.ButtonFace;
-			buttonCerarForm.Location = new Point(601, 12);
+			buttonCerarForm.Location = new Point(687, 16);
+			buttonCerarForm.Margin = new Padding(3, 4, 3, 4);
 			buttonCerarForm.Name = "buttonCerarForm";
-			buttonCerarForm.Size = new Size(55, 25);
+			buttonCerarForm.Size = new Size(63, 33);
 			buttonCerarForm.TabIndex = 15;
 			buttonCerarForm.Text = "x";
 			buttonCerarForm.UseVisualStyleBackColor = false;
@@ -122,15 +135,18 @@
 			// panelGuardarColas
 			// 
 			panelGuardarColas.BackColor = Color.FromArgb(135, 20, 31);
+			panelGuardarColas.Controls.Add(textBoxResultadoGuardar);
 			panelGuardarColas.Dock = DockStyle.Bottom;
-			panelGuardarColas.Location = new Point(0, 306);
+			panelGuardarColas.Location = new Point(0, 408);
+			panelGuardarColas.Margin = new Padding(3, 4, 3, 4);
 			panelGuardarColas.Name = "panelGuardarColas";
-			panelGuardarColas.Size = new Size(668, 216);
+			panelGuardarColas.Size = new Size(763, 288);
 			panelGuardarColas.TabIndex = 14;
 			// 
 			// panelMostrar
 			// 
-			panelMostrar.Location = new Point(1, 2);
+			panelMostrar.Location = new Point(1, 3);
+			panelMostrar.Margin = new Padding(3, 4, 3, 4);
 			panelMostrar.Name = "panelMostrar";
 			panelMostrar.Size = new Size(0, 0);
 			panelMostrar.TabIndex = 3;
@@ -138,20 +154,37 @@
 			// panel1
 			// 
 			panel1.Location = new Point(2, 0);
+			panel1.Margin = new Padding(3, 4, 3, 4);
 			panel1.Name = "panel1";
 			panel1.Size = new Size(0, 0);
 			panel1.TabIndex = 2;
 			// 
+			// textBoxResultadoGuardar
+			// 
+			textBoxResultadoGuardar.BackColor = Color.FromArgb(135, 20, 31);
+			textBoxResultadoGuardar.BorderStyle = BorderStyle.None;
+			textBoxResultadoGuardar.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+			textBoxResultadoGuardar.ForeColor = Color.White;
+			textBoxResultadoGuardar.Location = new Point(260, 27);
+			textBoxResultadoGuardar.Margin = new Padding(3, 4, 3, 4);
+			textBoxResultadoGuardar.Name = "textBoxResultadoGuardar";
+			textBoxResultadoGuardar.ReadOnly = true;
+			textBoxResultadoGuardar.Size = new Size(213, 23);
+			textBoxResultadoGuardar.TabIndex = 11;
+			// 
 			// FormMostrar
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(668, 522);
+			ClientSize = new Size(763, 696);
 			Controls.Add(panelContenedor);
+			Margin = new Padding(3, 4, 3, 4);
 			Name = "FormMostrar";
 			Text = "FormMostrar";
 			panelContenedor.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			panelGuardarColas.ResumeLayout(false);
+			panelGuardarColas.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -168,5 +201,6 @@
 		private DataGridViewTextBoxColumn Cgenero;
 		private DataGridViewTextBoxColumn Cduracion;
 		private DataGridViewTextBoxColumn Cyear;
+		private TextBox textBoxResultadoGuardar;
 	}
 }

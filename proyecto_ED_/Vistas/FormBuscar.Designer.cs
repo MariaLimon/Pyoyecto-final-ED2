@@ -59,15 +59,17 @@
 			panelContenedor.Controls.Add(panel1);
 			panelContenedor.Dock = DockStyle.Fill;
 			panelContenedor.Location = new Point(0, 0);
+			panelContenedor.Margin = new Padding(3, 4, 3, 4);
 			panelContenedor.Name = "panelContenedor";
-			panelContenedor.Size = new Size(668, 522);
+			panelContenedor.Size = new Size(763, 696);
 			panelContenedor.TabIndex = 3;
 			// 
 			// buttonBuscar
 			// 
-			buttonBuscar.Location = new Point(430, 98);
+			buttonBuscar.Location = new Point(500, 72);
+			buttonBuscar.Margin = new Padding(3, 4, 3, 4);
 			buttonBuscar.Name = "buttonBuscar";
-			buttonBuscar.Size = new Size(69, 25);
+			buttonBuscar.Size = new Size(79, 33);
 			buttonBuscar.TabIndex = 16;
 			buttonBuscar.Text = "Buscar";
 			buttonBuscar.UseVisualStyleBackColor = true;
@@ -79,13 +81,12 @@
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
 			dataGridView1.GridColor = Color.Black;
-			dataGridView1.Location = new Point(21, 139);
-			dataGridView1.Margin = new Padding(3, 2, 3, 2);
+			dataGridView1.Location = new Point(78, 157);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(622, 372);
+			dataGridView1.Size = new Size(622, 222);
 			dataGridView1.TabIndex = 18;
 			// 
 			// Cid
@@ -133,10 +134,12 @@
 			// 
 			textBoxNombrePelicula.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxNombrePelicula.BorderStyle = BorderStyle.None;
+			textBoxNombrePelicula.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			textBoxNombrePelicula.ForeColor = Color.White;
-			textBoxNombrePelicula.Location = new Point(259, 101);
+			textBoxNombrePelicula.Location = new Point(303, 72);
+			textBoxNombrePelicula.Margin = new Padding(3, 4, 3, 4);
 			textBoxNombrePelicula.Name = "textBoxNombrePelicula";
-			textBoxNombrePelicula.Size = new Size(143, 16);
+			textBoxNombrePelicula.Size = new Size(163, 23);
 			textBoxNombrePelicula.TabIndex = 17;
 			// 
 			// labelNombre
@@ -144,9 +147,9 @@
 			labelNombre.AutoSize = true;
 			labelNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
 			labelNombre.ForeColor = SystemColors.ButtonFace;
-			labelNombre.Location = new Point(193, 101);
+			labelNombre.Location = new Point(200, 72);
 			labelNombre.Name = "labelNombre";
-			labelNombre.Size = new Size(60, 17);
+			labelNombre.Size = new Size(77, 23);
 			labelNombre.TabIndex = 16;
 			labelNombre.Text = "Nombre:";
 			// 
@@ -159,9 +162,10 @@
 			buttonCerarForm.FlatStyle = FlatStyle.Flat;
 			buttonCerarForm.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
 			buttonCerarForm.ForeColor = SystemColors.ButtonFace;
-			buttonCerarForm.Location = new Point(601, 12);
+			buttonCerarForm.Location = new Point(687, 16);
+			buttonCerarForm.Margin = new Padding(3, 4, 3, 4);
 			buttonCerarForm.Name = "buttonCerarForm";
-			buttonCerarForm.Size = new Size(55, 25);
+			buttonCerarForm.Size = new Size(63, 33);
 			buttonCerarForm.TabIndex = 15;
 			buttonCerarForm.Text = "x";
 			buttonCerarForm.UseVisualStyleBackColor = false;
@@ -171,14 +175,16 @@
 			// 
 			panelGuardarColas.BackColor = Color.FromArgb(135, 20, 31);
 			panelGuardarColas.Dock = DockStyle.Bottom;
-			panelGuardarColas.Location = new Point(0, 306);
+			panelGuardarColas.Location = new Point(0, 408);
+			panelGuardarColas.Margin = new Padding(3, 4, 3, 4);
 			panelGuardarColas.Name = "panelGuardarColas";
-			panelGuardarColas.Size = new Size(668, 216);
+			panelGuardarColas.Size = new Size(763, 288);
 			panelGuardarColas.TabIndex = 14;
 			// 
 			// panelMostrar
 			// 
-			panelMostrar.Location = new Point(1, 2);
+			panelMostrar.Location = new Point(1, 3);
+			panelMostrar.Margin = new Padding(3, 4, 3, 4);
 			panelMostrar.Name = "panelMostrar";
 			panelMostrar.Size = new Size(0, 0);
 			panelMostrar.TabIndex = 3;
@@ -186,16 +192,18 @@
 			// panel1
 			// 
 			panel1.Location = new Point(2, 0);
+			panel1.Margin = new Padding(3, 4, 3, 4);
 			panel1.Name = "panel1";
 			panel1.Size = new Size(0, 0);
 			panel1.TabIndex = 2;
 			// 
 			// FormBuscar
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(668, 522);
+			ClientSize = new Size(763, 696);
 			Controls.Add(panelContenedor);
+			Margin = new Padding(3, 4, 3, 4);
 			Name = "FormBuscar";
 			Text = "FormBuscar";
 			panelContenedor.ResumeLayout(false);

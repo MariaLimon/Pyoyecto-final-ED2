@@ -49,16 +49,18 @@
 			panelGuardarColas.Controls.Add(textBoxResultadoGuardar);
 			panelGuardarColas.Controls.Add(buttonOrdenarDescendente);
 			panelGuardarColas.Dock = DockStyle.Bottom;
-			panelGuardarColas.Location = new Point(0, 306);
+			panelGuardarColas.Location = new Point(0, 408);
+			panelGuardarColas.Margin = new Padding(3, 4, 3, 4);
 			panelGuardarColas.Name = "panelGuardarColas";
-			panelGuardarColas.Size = new Size(668, 216);
+			panelGuardarColas.Size = new Size(763, 288);
 			panelGuardarColas.TabIndex = 26;
 			// 
 			// buttonOrdenarAscendente
 			// 
-			buttonOrdenarAscendente.Location = new Point(403, 84);
+			buttonOrdenarAscendente.Location = new Point(461, 112);
+			buttonOrdenarAscendente.Margin = new Padding(3, 4, 3, 4);
 			buttonOrdenarAscendente.Name = "buttonOrdenarAscendente";
-			buttonOrdenarAscendente.Size = new Size(120, 25);
+			buttonOrdenarAscendente.Size = new Size(137, 33);
 			buttonOrdenarAscendente.TabIndex = 17;
 			buttonOrdenarAscendente.Text = "Ascendente";
 			buttonOrdenarAscendente.UseVisualStyleBackColor = true;
@@ -68,18 +70,21 @@
 			// 
 			textBoxResultadoGuardar.BackColor = Color.FromArgb(135, 20, 31);
 			textBoxResultadoGuardar.BorderStyle = BorderStyle.None;
+			textBoxResultadoGuardar.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			textBoxResultadoGuardar.ForeColor = Color.White;
-			textBoxResultadoGuardar.Location = new Point(288, 13);
+			textBoxResultadoGuardar.Location = new Point(242, 18);
+			textBoxResultadoGuardar.Margin = new Padding(3, 4, 3, 4);
 			textBoxResultadoGuardar.Name = "textBoxResultadoGuardar";
 			textBoxResultadoGuardar.ReadOnly = true;
-			textBoxResultadoGuardar.Size = new Size(143, 16);
+			textBoxResultadoGuardar.Size = new Size(235, 23);
 			textBoxResultadoGuardar.TabIndex = 16;
 			// 
 			// buttonOrdenarDescendente
 			// 
-			buttonOrdenarDescendente.Location = new Point(156, 84);
+			buttonOrdenarDescendente.Location = new Point(178, 112);
+			buttonOrdenarDescendente.Margin = new Padding(3, 4, 3, 4);
 			buttonOrdenarDescendente.Name = "buttonOrdenarDescendente";
-			buttonOrdenarDescendente.Size = new Size(120, 25);
+			buttonOrdenarDescendente.Size = new Size(137, 33);
 			buttonOrdenarDescendente.TabIndex = 0;
 			buttonOrdenarDescendente.Text = "Descendente";
 			buttonOrdenarDescendente.UseVisualStyleBackColor = true;
@@ -91,13 +96,12 @@
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cid, Cnombre, Cgenero, Cduracion, Cyear });
 			dataGridView1.GridColor = Color.Black;
-			dataGridView1.Location = new Point(25, 60);
-			dataGridView1.Margin = new Padding(3, 2, 3, 2);
+			dataGridView1.Location = new Point(29, 80);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.ReadOnly = true;
 			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 29;
-			dataGridView1.Size = new Size(615, 241);
+			dataGridView1.Size = new Size(703, 321);
 			dataGridView1.TabIndex = 27;
 			// 
 			// Cid
@@ -143,12 +147,13 @@
 			// 
 			// FormOrdenar
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.ActiveCaptionText;
-			ClientSize = new Size(668, 522);
+			ClientSize = new Size(763, 696);
 			Controls.Add(dataGridView1);
 			Controls.Add(panelGuardarColas);
+			Margin = new Padding(3, 4, 3, 4);
 			Name = "FormOrdenar";
 			Text = "FormOrdenar";
 			panelGuardarColas.ResumeLayout(false);
