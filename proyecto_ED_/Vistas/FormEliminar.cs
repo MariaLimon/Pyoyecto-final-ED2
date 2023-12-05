@@ -23,6 +23,7 @@ namespace proyecto_ED_
 			if (origen == 1)
 			{
 				//colas
+				buttonEliminarMedio.Visible = false;
 			}
 			else if (origen == 2)
 			{
@@ -37,8 +38,9 @@ namespace proyecto_ED_
 			else if (origen == 4)
 			{
 				//pilas
+				buttonEliminarMedio.Visible=false;
 				Pila pila = Pila.ObtenerInstancia();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 			else
 			{
@@ -70,13 +72,13 @@ namespace proyecto_ED_
 				lista.EliminarDelFrente();
 				lista.ImprimirLista(dataGridView1);
 			}
-			else if(origen == 4)
+			else if (origen == 4)
 			{
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
-				pila.EliminarFrentePila();
+				pila.EliminarFrentePila(textBoxResultadoGuardar);
 				dataGridView1.Rows.Clear();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 			else
 			{
@@ -107,7 +109,7 @@ namespace proyecto_ED_
 			{
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
-				
+
 			}
 			else
 			{
@@ -134,13 +136,13 @@ namespace proyecto_ED_
 				lista.EliminarFinalLista();
 				lista.ImprimirLista(dataGridView1);
 			}
-			else if(origen == 4)
+			else if (origen == 4)
 			{
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
-				pila.EliminarFinalPila();
+				pila.EliminarFinalPila(textBoxResultadoGuardar);
 				dataGridView1.Rows.Clear();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 			else
 			{

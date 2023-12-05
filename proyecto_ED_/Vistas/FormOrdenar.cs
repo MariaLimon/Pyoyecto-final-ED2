@@ -32,11 +32,11 @@ namespace proyecto_ED_.Vistas
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 				lista.ImprimirLista(dataGridView1);
 			}
-			else if(origen == 4)
+			else if (origen == 4)
 			{
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 			else
 			{
@@ -67,7 +67,7 @@ namespace proyecto_ED_.Vistas
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
 				pila.OrdenarDecendentePila();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 		}
 
@@ -93,7 +93,7 @@ namespace proyecto_ED_.Vistas
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
 				pila.OrdenarAscendentePila();
-				pila.ImprimirDatos(dataGridView1);
+				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}
 		}
 	}

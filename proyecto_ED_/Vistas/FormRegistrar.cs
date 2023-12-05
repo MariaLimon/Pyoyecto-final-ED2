@@ -24,6 +24,14 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
+			if(origen == 1 || origen ==4)
+			{
+				buttonGuardarMedio.Visible = false;
+			}
+			else
+			{
+				buttonGuardarMedio.Visible = true;
+			}
 		}
 		//para solo aceptar numeros en la duracion de la pelicula
 		private void textBoxDuracionPelicula_KeyPress(object sender, KeyPressEventArgs e)
@@ -97,7 +105,8 @@ namespace proyecto_ED_
 			else if (origen == 4)
 			{
 				//pilas
-				pila.InsertarFrentePila(pelicula);
+				pila.InsertarFrentePila(pelicula, textBoxResultadoGuardar);
+
 			}
 			else
 			{
@@ -185,7 +194,7 @@ namespace proyecto_ED_
 			{
 				//pilas
 				Pila pila = Pila.ObtenerInstancia();
-				pila.InsertarFinalPila(pelicula);
+				pila.InsertarFinalPila(pelicula, textBoxResultadoGuardar);
 
 			}
 			else
