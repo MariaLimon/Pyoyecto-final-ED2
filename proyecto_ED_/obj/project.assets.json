@@ -8,23 +8,23 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\dalia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\proyecto_ED_\\proyecto_ED_\\proyecto_ED_.csproj",
+      "projectUniqueName": "C:\\Users\\dalia\\Source\\Repos\\Proyecto-final-ED2\\proyecto_ED_\\proyecto_ED_.csproj",
       "projectName": "proyecto_ED_",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\proyecto_ED_\\proyecto_ED_\\proyecto_ED_.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\proyecto_ED_\\proyecto_ED_\\obj\\",
+      "projectPath": "C:\\Users\\dalia\\Source\\Repos\\Proyecto-final-ED2\\proyecto_ED_\\proyecto_ED_.csproj",
+      "packagesPath": "C:\\Users\\dalia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dalia\\Source\\Repos\\Proyecto-final-ED2\\proyecto_ED_\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dalia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -70,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
