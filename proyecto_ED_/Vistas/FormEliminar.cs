@@ -20,6 +20,14 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
+			if(origen != 4)
+			{
+				buttonEliminarNombrePila.Visible = false;
+			}
+			else
+			{
+				buttonEliminarNombrePila.Visible=true;
+			}
 			if (origen == 1)
 			{
 				//colas
@@ -38,7 +46,7 @@ namespace proyecto_ED_
 			else if (origen == 4)
 			{
 				//pilas
-				buttonEliminarMedio.Visible=false;
+				buttonEliminarMedio.Visible = false;
 				Pila pila = Pila.ObtenerInstancia();
 				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 			}

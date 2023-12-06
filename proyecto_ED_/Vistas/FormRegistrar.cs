@@ -24,7 +24,7 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
-			if(origen == 1 || origen ==4)
+			if(origen == 1 || origen == 4)
 			{
 				buttonGuardarMedio.Visible = false;
 			}

@@ -40,6 +40,7 @@
 			Cgenero = new DataGridViewTextBoxColumn();
 			Cduracion = new DataGridViewTextBoxColumn();
 			Cyear = new DataGridViewTextBoxColumn();
+			buttonEliminarNombrePila = new Button();
 			panelGuardarColas.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
@@ -47,6 +48,7 @@
 			// panelGuardarColas
 			// 
 			panelGuardarColas.BackColor = Color.FromArgb(135, 20, 31);
+			panelGuardarColas.Controls.Add(buttonEliminarNombrePila);
 			panelGuardarColas.Controls.Add(textBoxResultadoGuardar);
 			panelGuardarColas.Controls.Add(buttonEliminarMedio);
 			panelGuardarColas.Controls.Add(buttonEliminarFinal);
@@ -175,6 +177,16 @@
 			Cyear.ReadOnly = true;
 			Cyear.Width = 125;
 			// 
+			// buttonEliminarNombrePila
+			// 
+			buttonEliminarNombrePila.Location = new Point(311, 129);
+			buttonEliminarNombrePila.Margin = new Padding(3, 4, 3, 4);
+			buttonEliminarNombrePila.Name = "buttonEliminarNombrePila";
+			buttonEliminarNombrePila.Size = new Size(168, 33);
+			buttonEliminarNombrePila.TabIndex = 11;
+			buttonEliminarNombrePila.Text = "Eliminar por nombre";
+			buttonEliminarNombrePila.UseVisualStyleBackColor = true;
+			// 
 			// FormEliminar
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
@@ -207,5 +219,6 @@
 		private DataGridViewTextBoxColumn Cduracion;
 		private DataGridViewTextBoxColumn Cyear;
 		private TextBox textBoxResultadoGuardar;
+		private Button buttonEliminarNombrePila;
 	}
 }
