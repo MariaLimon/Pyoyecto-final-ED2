@@ -206,19 +206,21 @@ namespace proyecto_ED_
 			abrilFormulario(new FormEliminar(4));
 			OcultarSubmenu();
 		}
-
+		/*
 		private void buttonEditarPilas_Click(object sender, EventArgs e)
 		{
 			abrilFormulario(new FormEditar(4));
 			OcultarSubmenu();
 		}
+		*/
 
 		private void buttonMostrarPilas_Click(object sender, EventArgs e)
 		{
 			abrilFormulario(new FormMostrar(4));
 			OcultarSubmenu();
 		}
-
+		
+		/*
 		private void buttonOrdenarPilas_Click(object sender, EventArgs e)
 		{
 			abrilFormulario(new FormOrdenar(4));
@@ -230,6 +232,7 @@ namespace proyecto_ED_
 			abrilFormulario(new FormBuscar(4));
 			OcultarSubmenu();
 		}
+		*/
 		#endregion
 
 

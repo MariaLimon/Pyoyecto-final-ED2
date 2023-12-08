@@ -1,4 +1,5 @@
 ﻿using proyecto_ED_.EstructurasDeDatos;
+using proyecto_ED_.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,27 +21,40 @@ namespace proyecto_ED_
 		{
 			InitializeComponent();
 			this.origen = origen;
+			
 			if (origen == 1)
 			{
 				//colas
 				buttonEliminarMedio.Visible = false;
+				buttonEliminarCima.Visible = false;
+				buttonEliminarTodoPia.Visible = false;
 			}
 			else if (origen == 2)
 			{
 				//matriz
+				buttonEliminarCima.Visible = false;
+				buttonEliminarTodoPia.Visible = false;
 			}
 			else if (origen == 3)
 			{
 				//listas
+				buttonEliminarCima.Visible = false;
+				buttonEliminarTodoPia.Visible = false;
 				listaEnlazadaSimple lista = listaEnlazadaSimple.ObtenerInstancia();
 				lista.ImprimirLista(dataGridView1);
 			}
 			else if (origen == 4)
 			{
 				//pilas
-				buttonEliminarMedio.Visible=false;
+
 				Pila pila = Pila.ObtenerInstancia();
 				pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
+				buttonEliminarMedio.Visible = false;
+				buttonEliminarFinal.Visible = false;
+				buttonEliminarFrente.Visible = false;
+				buttonEliminarCima.Visible = true;
+				buttonEliminarTodoPia.Visible = true;
+
 			}
 			else
 			{
@@ -148,6 +162,23 @@ namespace proyecto_ED_
 			{
 				MessageBox.Show("Ocurrio un error al abrir el formulario D:");
 			}
+		}
+
+		private void buttonEliminarCima_Click(object sender, EventArgs e)
+		{
+			//pilas
+			Pila pila = Pila.ObtenerInstancia();
+			pila.EliminarFrentePila(textBoxResultadoGuardar);
+			dataGridView1.Rows.Clear();
+			pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
+		}
+
+		private void buttonEliminarTodoPia_Click(object sender, EventArgs e)
+		{
+			Pila pila = Pila.ObtenerInstancia();
+			pila.EliminarTodoPila(textBoxResultadoGuardar);
+			dataGridView1.Rows.Clear();
+			pila.ImprimirDatos(dataGridView1, textBoxResultadoGuardar);
 		}
 	}
 }

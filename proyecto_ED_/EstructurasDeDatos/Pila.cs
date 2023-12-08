@@ -82,6 +82,7 @@ namespace proyecto_ED_.EstructurasDeDatos
 				mensaje.Text = "La película se agregó al frente de la pila";
 			}
 		}
+		
 		public void InsertarFinalPila(Peliculas nuevaPeli, TextBox mensaje)
 		{
 			if (PilaLlena())
@@ -108,7 +109,30 @@ namespace proyecto_ED_.EstructurasDeDatos
 			else
 			{
 				Peliculas auxiliar = listaPila[_cima];
-				_cima--;
+				while(_cima > 0)
+				{
+					_cima--;
+				}
+				
+				mensaje.Text = "se elimino del final de la pila";
+				return auxiliar;
+			}
+		}
+		public Peliculas EliminarTodoPila(TextBox mensaje)
+		{
+			if (PilaVacia())
+			{
+				mensaje.Text = "la pila esta vacia";
+				return null;
+			}
+			else
+			{
+				Peliculas auxiliar = listaPila[_cima];
+				while (_cima > -1)
+				{
+					_cima--;
+				}
+
 				mensaje.Text = "se elimino del final de la pila";
 				return auxiliar;
 			}
@@ -171,6 +195,7 @@ namespace proyecto_ED_.EstructurasDeDatos
 			}
 			else
 			{
+				
 				for (int i = 0; i < _cima + 1; i++)
 				{
 					Peliculas pelicula = listaPila[i];
@@ -191,6 +216,7 @@ namespace proyecto_ED_.EstructurasDeDatos
 
 
 		//editar datos de la pila: EditarPila
+		/*
 		public Peliculas EditarPila(string nombre)
 		{
 			int centinela = -1;
@@ -201,6 +227,10 @@ namespace proyecto_ED_.EstructurasDeDatos
 			}
 			else
 			{
+				for (int i = _cima; i >= 0; i--)
+				{
+					listaPila[i + 1] = listaPila[i];
+				}
 				for (int i = 0; i < _cima + 1; i++)
 				{
 					Peliculas pelicula = listaPila[i];
@@ -220,38 +250,43 @@ namespace proyecto_ED_.EstructurasDeDatos
 				return null;
 			}
 		}
+		*/
 
 
-		//editar datos de la pila: EditarPila
-		public Peliculas EiminarPorNombrePila(string nombre)
+		// Método para editar un elemento en la pila
+		/*
+		public void EditarElementoEnPila(int elementoBuscado, int nuevoValor)
 		{
-			int centinela = -1;
-			if (PilaVacia())
+			Pila pilaAuxiliar = new Pila(); // Pila auxiliar para mantener temporalmente los elementos
+			Pila pila = Pila.ObtenerInstancia();
+			// Desapilar elementos de la pila original a la pila auxiliar hasta encontrar el elemento deseado
+			while (pila.Count > 0 && pila.Peek() != elementoBuscado)
 			{
-				MessageBox.Show("La pila está vacía");
-				return null;
+				pilaAuxiliar.InsertarFrentePila(pila.EliminarFrentePila());
+			}
+
+			// Si se encontró el elemento en la pila original
+			if (pila.Count > 0)
+			{
+				pila.Pop(); // Eliminar el elemento antiguo
+				pila.Push(nuevoValor); // Agregar el nuevo elemento editado a la pila original
 			}
 			else
 			{
-				for (int i = 0; i < _cima + 1; i++)
-				{
-					Peliculas pelicula = listaPila[i];
-					if (pelicula.Nombre == nombre)
-					{
-						centinela = 1;
-						return pelicula;
-						break;
-					}
-					return null;
-				}
-				if (centinela == -1)
-				{
-					MessageBox.Show("el elemento no se encuentra en la pila");
-					return null;
-				}
-				return null;
+				Console.WriteLine("El elemento no se encuentra en la pila");
+			}
+
+			// Volver a apilar los elementos desde la pila auxiliar a la pila original
+			while (pilaAuxiliar.Count > 0)
+			{
+				pila.Push(pilaAuxiliar.Pop());
 			}
 		}
+
+		// ... otros métodos de la clase Pila ...
+	*/
+
+
 
 		public void OrdenarDecendentePila()
 		{

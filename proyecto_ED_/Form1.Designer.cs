@@ -129,7 +129,8 @@
 			buttonBuscarPilas.Text = "Buscar";
 			buttonBuscarPilas.TextAlign = ContentAlignment.MiddleLeft;
 			buttonBuscarPilas.UseVisualStyleBackColor = true;
-			buttonBuscarPilas.Click += buttonBuscarPilas_Click;
+			buttonBuscarPilas.Visible = false;
+			//buttonBuscarPilas.Click += buttonBuscarPilas_Click;
 			// 
 			// buttonOrdenarPilas
 			// 
@@ -147,7 +148,8 @@
 			buttonOrdenarPilas.Text = "Ordenar";
 			buttonOrdenarPilas.TextAlign = ContentAlignment.MiddleLeft;
 			buttonOrdenarPilas.UseVisualStyleBackColor = true;
-			buttonOrdenarPilas.Click += buttonOrdenarPilas_Click;
+			buttonOrdenarPilas.Visible = false;
+			//buttonOrdenarPilas.Click += buttonOrdenarPilas_Click;
 			// 
 			// buttonMostrarPilas
 			// 
@@ -183,7 +185,8 @@
 			buttonEditarPilas.Text = "Editar";
 			buttonEditarPilas.TextAlign = ContentAlignment.MiddleLeft;
 			buttonEditarPilas.UseVisualStyleBackColor = true;
-			buttonEditarPilas.Click += buttonEditarPilas_Click;
+			buttonEditarPilas.Visible= false;
+			//buttonEditarPilas.Click += buttonEditarPilas_Click;
 			// 
 			// buttonEliminarPilas
 			// 
